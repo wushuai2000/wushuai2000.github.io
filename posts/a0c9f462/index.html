@@ -1,0 +1,538 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#6200ee"><meta name="author" content="Explorer"><meta name="copyright" content="Explorer"><meta name="generator" content="Hexo 6.0.0"><meta name="theme" content="hexo-theme-yun"><title>HTML入门与实战 | explorerの博客</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.2.4/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" defer></script><script class="meting-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js" defer></script><link rel="icon" type="image/png" href="/./favicon.ico"><link rel="mask-icon" href="/./favicon.ico" color="#6200ee"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"ccsu.top","root":"/","title":["Wu","Shuai","の","Blog"],"version":"1.8.8","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]},"waline":{"config":{"enable":true,"serverURL":"https://blog-api-seven-vert.vercel.app/","comment":false,"visitor":false,"emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/bilibili/","https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/weibo/","https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/qq/"],"locale":{"placeholder":"2506812280@qq.com"},"requiredMeta":["nick"],"el":"#waline","lang":"en","path":"/posts/a0c9f462/"},"cdn":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"html.dark"},"vendors":{"darken":"https://cdn.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="explorerの博客" type="application/atom+xml"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-BMBD00SVV4"></script><script>if (CONFIG.hostname === location.hostname) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BMBD00SVV4');
+}</script><script>(function(){
+  var bp = document.createElement('script');
+  var curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else {
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="第一章 Web基础 浏览器：渲染网页展示  1、常见浏览器 IE、Edge Google Chrome Mozilla Firefox Safari Opera  2、浏览器内核 浏览器内核可以分成两部分：渲染引擎（Layout engineer 或者 Rendering Engine）和 JS 引擎。  渲染引擎负责取得网页的内容（HTML、XML、图像等）、整理讯息（例如加入CSS等），以及计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML入门与实战">
+<meta property="og:url" content="http://ccsu.top/posts/a0c9f462/index.html">
+<meta property="og:site_name" content="explorerの博客">
+<meta property="og:description" content="第一章 Web基础 浏览器：渲染网页展示  1、常见浏览器 IE、Edge Google Chrome Mozilla Firefox Safari Opera  2、浏览器内核 浏览器内核可以分成两部分：渲染引擎（Layout engineer 或者 Rendering Engine）和 JS 引擎。  渲染引擎负责取得网页的内容（HTML、XML、图像等）、整理讯息（例如加入CSS等），以及计">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-14T13:57:08.000Z">
+<meta property="article:modified_time" content="2020-07-14T13:57:08.000Z">
+<meta property="article:author" content="Explorer">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="标签">
+<meta name="twitter:card" content="summary"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Explorer"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="Explorer"><span class="site-author-status" title="努力学习">😄</span></a><div class="site-author-name"><a href="/about/">Explorer</a></div><span class="site-name">explorerの博客</span><sub class="site-subtitle"></sub><div class="site-desciption">前路漫漫，当克己，当慎独!</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">35</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">10</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">37</span></a></div><a class="site-state-item hty-icon-button" href="/about/" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/wushuai2000" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=549838440" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/huan-ji-91-3/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/345844264" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:2506812280@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/albums/" title="相册" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-Web%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">第一章 Web基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%B8%B8%E8%A7%81%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">1、常见浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8"><span class="toc-number">1.2.</span> <span class="toc-text">2、浏览器内核</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81web%E6%A0%87%E5%87%86"><span class="toc-number">1.3.</span> <span class="toc-text">3、web标准</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-HTML%E5%85%A5%E9%97%A8"><span class="toc-number">2.</span> <span class="toc-text">第二章  HTML入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81HTML%E5%88%9D%E8%AF%86"><span class="toc-number">2.1.</span> <span class="toc-text">1、HTML初识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E9%AA%A8%E6%9E%B6%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">2、骨架格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%A0%87%E7%AD%BE"><span class="toc-number">2.3.</span> <span class="toc-text">3、标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%BF%85%E8%A6%81%E7%9A%84%E6%A0%87%E7%AD%BE"><span class="toc-number">2.3.1.</span> <span class="toc-text">（1）必要的标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB"><span class="toc-number">2.3.2.</span> <span class="toc-text">（2）标签分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%A0%87%E7%AD%BE%E5%B5%8C%E5%A5%97%E5%92%8C%E5%B9%B6%E5%88%97%E5%85%B3%E7%B3%BB"><span class="toc-number">2.3.3.</span> <span class="toc-text">（3）标签嵌套和并列关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%A0%87%E7%AD%BE%E3%80%81%E9%AA%A8%E6%9E%B6"><span class="toc-number">2.4.</span> <span class="toc-text">4、开发工具：快速生成标签、骨架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81doctype%E6%96%87%E6%A1%A3%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.5.</span> <span class="toc-text">5、doctype文档类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%AD%97%E7%AC%A6%E9%9B%86%E7%AE%80%E4%BB%8B"><span class="toc-number">2.6.</span> <span class="toc-text">6、字符集简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">3.</span> <span class="toc-text">第三章 HTML标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%A0%87%E7%AD%BE%E7%9A%84%E8%AF%AD%E4%B9%89%E5%8C%96"><span class="toc-number">3.1.</span> <span class="toc-text">1、标签的语义化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.</span> <span class="toc-text">2、排版标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.1.</span> <span class="toc-text">（1）标题标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%AE%B5%E8%90%BD%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.2.</span> <span class="toc-text">（2）段落标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%B0%B4%E5%B9%B3%E7%BA%BF%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.3.</span> <span class="toc-text">（3）水平线标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.4.</span> <span class="toc-text">（4）换行标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%885%EF%BC%89div-span%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.5.</span> <span class="toc-text">（5）div span标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">3.3.</span> <span class="toc-text">3、文本格式化标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7"><span class="toc-number">3.4.</span> <span class="toc-text">4、标签属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="toc-number">3.5.</span> <span class="toc-text">5、图像标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-number">3.6.</span> <span class="toc-text">6、链接标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">3.7.</span> <span class="toc-text">7、锚点定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81base%E6%A0%87%E7%AD%BE"><span class="toc-number">3.8.</span> <span class="toc-text">8、base标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-number">3.9.</span> <span class="toc-text">9、特殊字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81%E6%B3%A8%E9%87%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">3.10.</span> <span class="toc-text">10、注释标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81%E8%B7%AF%E5%BE%84"><span class="toc-number">3.11.</span> <span class="toc-text">11、路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-number">3.12.</span> <span class="toc-text">12、列表标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8-ul"><span class="toc-number">3.12.1.</span> <span class="toc-text">(1)无序列表 ul</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-ol"><span class="toc-number">3.12.2.</span> <span class="toc-text">(2)有序列表 ol</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8"><span class="toc-number">3.12.3.</span> <span class="toc-text">(3)自定义列表</span></a></li></ol></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/57%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/" style="font-size: 12px; color: #999">57步进电机</a> <a href="/tags/DHT11/" style="font-size: 12px; color: #999">DHT11</a> <a href="/tags/ESP8266/" style="font-size: 12px; color: #999">ESP8266</a> <a href="/tags/GPIO/" style="font-size: 18px; color: #668eb3">GPIO</a> <a href="/tags/HC-05/" style="font-size: 12px; color: #999">HC-05</a> <a href="/tags/HTML/" style="font-size: 18px; color: #668eb3">HTML</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #668eb3">Hexo</a> <a href="/tags/Hexo%E5%AE%89%E8%A3%85/" style="font-size: 24px; color: #3383cd">Hexo安装</a> <a href="/tags/IAR%E8%BD%AF%E4%BB%B6/" style="font-size: 12px; color: #999">IAR软件</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #668eb3">JavaScript</a> <a href="/tags/KMP/" style="font-size: 12px; color: #999">KMP</a> <a href="/tags/MQTT/" style="font-size: 12px; color: #999">MQTT</a> <a href="/tags/OpenCV/" style="font-size: 12px; color: #999">OpenCV</a> <a href="/tags/PWM/" style="font-size: 12px; color: #999">PWM</a> <a href="/tags/RPi-GPIO/" style="font-size: 18px; color: #668eb3">RPi.GPIO</a> <a href="/tags/ZigBee/" style="font-size: 30px; color: #0078e7">ZigBee</a> <a href="/tags/cc2530/" style="font-size: 12px; color: #999">cc2530</a> <a href="/tags/github/" style="font-size: 12px; color: #999">github</a> <a href="/tags/music/" style="font-size: 12px; color: #999">music</a> <a href="/tags/%E4%B8%B2/" style="font-size: 12px; color: #999">串</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#6200ee;"><link itemprop="mainEntityOfPage" href="http://ccsu.top/posts/a0c9f462/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Explorer"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="explorerの博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">HTML入门与实战</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">Posted on</span> <time title="Created: 2020-07-14 21:57:08" itemprop="dateCreated datePublished" datetime="2020-07-14T21:57:08+08:00">2020-07-14</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="Word count in article"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="Word count in article">3.3k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Reading time"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="Reading time">12m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%89%91%E5%AE%A2/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">前端三剑客</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/HTML/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">HTML</span></a><a class="tag-item" href="/tags/%E6%A0%87%E7%AD%BE/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">标签</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="第一章-Web基础"><a href="#第一章-Web基础" class="headerlink" title="第一章 Web基础"></a>第一章 Web基础</h1><ul>
+<li>浏览器：渲染网页展示</li>
+</ul>
+<h2 id="1、常见浏览器"><a href="#1、常见浏览器" class="headerlink" title="1、常见浏览器"></a>1、常见浏览器</h2><ul>
+<li>IE、Edge</li>
+<li>Google Chrome</li>
+<li>Mozilla Firefox</li>
+<li>Safari</li>
+<li>Opera</li>
+</ul>
+<h2 id="2、浏览器内核"><a href="#2、浏览器内核" class="headerlink" title="2、浏览器内核"></a>2、浏览器内核</h2><ul>
+<li><p>浏览器内核可以分成两部分：渲染引擎（Layout engineer 或者 Rendering Engine）和 JS 引擎。</p>
+</li>
+<li><p>渲染引擎负责取得网页的内容（HTML、XML、图像等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后输出至显示器或打印机。</p>
+</li>
+<li><p>JS引擎则是解析JavaScript语言，执行JavaScript语言来实现网页的动态效果。</p>
+  <pre class="line-numbers language-none"><code class="language-none">Trident（IE内核）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>IE、Edge、360</p>
+</li>
+<li><p>大多多核浏览器的兼容内核</p>
+  <pre class="line-numbers language-none"><code class="language-none">Gecko（firefox内核）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>代码开源，可开发程度高</p>
+</li>
+<li><p>打开速度慢、升级频繁</p>
+  <pre class="line-numbers language-none"><code class="language-none">webkit（Safari内核）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>早期chrome使用webkit内核，现在改为blink</p>
+  <pre class="line-numbers language-none"><code class="language-none">chromium&#x2F;Blink（chrome内核）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>blink实际上是webkit的分支</p>
+  <pre class="line-numbers language-none"><code class="language-none">Presto（opera内核）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>presto是opera早期内核，现在已经换为谷歌的blink内核。</p>
+  <pre class="line-numbers language-none"><code class="language-none">移动端的浏览器内核<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<p>移动端的浏览器内核说的是系统内置浏览器的内核。</p>
+<p>ios平台主要是webkit，Android 4.4之前的内核是webkit，后面切换到了chromium，Windows Phone 8的内核是Trident。</p>
+<h2 id="3、web标准"><a href="#3、web标准" class="headerlink" title="3、web标准"></a>3、web标准</h2><p>Web标准是由W3C和其他标准化组织制定的一系列标准的集合。主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。</p>
+<p>结构标准：结构用于对网页元素进行整理和分类，主要包括XML和XHTML两个部分。</p>
+<p>样式标准：表现用于设置网页元素的板式、颜色、大小等外观样式，主要指的是CSS。</p>
+<p>行为标准：行为是指网页模型的定义以及交互的编写，主要包括DOM和ECMAScript两个部分。</p>
+<p>理想状态的源码：.html、.css、.js 。</p>
+<h1 id="第二章-HTML入门"><a href="#第二章-HTML入门" class="headerlink" title="第二章  HTML入门"></a>第二章  HTML入门</h1><h2 id="1、HTML初识"><a href="#1、HTML初识" class="headerlink" title="1、HTML初识"></a>1、HTML初识</h2><ul>
+<li>HTML（英文Hyper Text Markup Language的缩写），中文译名为“超文本标签语言”，主要是通过对HTML标签对网页中的文本、图片、声音等内容进行描述。</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span>加粗文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="2、骨架格式"><a href="#2、骨架格式" class="headerlink" title="2、骨架格式"></a>2、骨架格式</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3、标签"><a href="#3、标签" class="headerlink" title="3、标签"></a>3、标签</h2><h3 id="（1）必要的标签"><a href="#（1）必要的标签" class="headerlink" title="（1）必要的标签"></a>（1）必要的标签</h3><ul>
+<li>html标签：作为所有html中标签的一个根节点</li>
+<li>head标签：用于存放title、meta、base、style、script、link，head标签中必须设置的标签是title</li>
+<li>title标签：页面标题</li>
+<li>body标签：页面主体部分</li>
+</ul>
+<h3 id="（2）标签分类"><a href="#（2）标签分类" class="headerlink" title="（2）标签分类"></a>（2）标签分类</h3><ul>
+<li><p>在HTML页面中，带有&lt;&gt;符号的元素被称为标签或元素。</p>
+</li>
+<li><p>1、双标签：该语法中&lt;标签名&gt;表示该标签的作用开始，一般称为开始标签；&lt;&#x2F;标签名&gt;表示该标签的作用结束，一般称为结束标签。</p>
+</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标签名</span><span class="token punctuation">></span></span>内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>标签名</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>2、单标签：单标签也称空标签，是指一个标签符号即可完整地描述某个功能的标签。</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标签名</span><span class="token punctuation">/></span></span>
+比如 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="（3）标签嵌套和并列关系"><a href="#（3）标签嵌套和并列关系" class="headerlink" title="（3）标签嵌套和并列关系"></a>（3）标签嵌套和并列关系</h3><ul>
+<li>嵌套关系：html嵌套head，head嵌套title</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>并列关系：比如head和body</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>下列哪个标签是错误的？</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">A	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+B	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">></span></span>
+C	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>	X
+D	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4、开发工具：快速生成标签、骨架"><a href="#4、开发工具：快速生成标签、骨架" class="headerlink" title="4、开发工具：快速生成标签、骨架"></a>4、开发工具：快速生成标签、骨架</h2><ul>
+<li>Dreamweaver</li>
+<li>sublime</li>
+<li>WebStorm</li>
+<li>HBuilder</li>
+<li>VSCode</li>
+</ul>
+<h2 id="5、doctype文档类型"><a href="#5、doctype文档类型" class="headerlink" title="5、doctype文档类型"></a>5、doctype文档类型</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>这句话告诉我们所使用的html版本，html 5的版本</li>
+<li>位于文档的最前面，用于向浏览器说明当前文档使用哪种HTML或XHTML标准规范，必须在开头使用该标签为所有的XHTML文档指定XHTML版本和类型，只有这样浏览器才能按指定的文档类型进行解析。</li>
+</ul>
+<h2 id="6、字符集简介"><a href="#6、字符集简介" class="headerlink" title="6、字符集简介"></a>6、字符集简介</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>utf-8是目前最常用的字符集编码方式，还有gbk和gb2312等较常用。</li>
+<li>GB2312简单中文，包含6763个汉字</li>
+<li>GBK包含全部中文字符，是GB2312的扩展，兼容GB2312</li>
+<li>UTF-8包含全世界所有国家需要用到的字符</li>
+</ul>
+<h1 id="第三章-HTML标签"><a href="#第三章-HTML标签" class="headerlink" title="第三章 HTML标签"></a>第三章 HTML标签</h1><h2 id="1、标签的语义化"><a href="#1、标签的语义化" class="headerlink" title="1、标签的语义化"></a>1、标签的语义化</h2><ul>
+<li>标签语义化即标签的含义。</li>
+<li>语义化标签</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">1、方便代码的阅读和维护
+2、同时让浏览器方便解析
+3、搜索引擎优化
+核心：合适的地方给一个合理的标签。
+语义良好：去掉CSS后，网页结构依然组织有序，并且有良好的可读性。
+原则：先确定语义的HTML，再选合适的CSS。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2、排版标签"><a href="#2、排版标签" class="headerlink" title="2、排版标签"></a>2、排版标签</h2><ul>
+<li>排版标签主要和CSS搭配使用，显示网页结构的标签，是网页布局最常用的标签。</li>
+</ul>
+<h3 id="（1）标题标签"><a href="#（1）标题标签" class="headerlink" title="（1）标题标签"></a>（1）标题标签</h3><ul>
+<li>单词缩写head，头部、标题</li>
+<li>HTML提供了6个等级的标题：&lt; h1 &gt;到&lt; h6 &gt;</li>
+<li>语义：作为标题使用，并且依据重要性递减</li>
+<li>最小到6级标题，数字再大无效</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>标题标签测试<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>一级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>二级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>三级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>四级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">></span></span>五级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span>六级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="（2）段落标签"><a href="#（2）段落标签" class="headerlink" title="（2）段落标签"></a>（2）段落标签</h3><ul>
+<li>单词缩写：paragraph</li>
+<li>就像写文章一样的，对内容分段</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>一段文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>是HTML文档中最常见的标签，默认情况下，文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
+</ul>
+<h3 id="（3）水平线标签"><a href="#（3）水平线标签" class="headerlink" title="（3）水平线标签"></a>（3）水平线标签</h3><ul>
+<li>单词缩写：horizontal 横线</li>
+<li>在网页中用水平线将段落与段落之间隔开，使得文档结构清晰，层次分明。这些水平线可以通过插入图片实现，也可以通过标签完成。</li>
+<li>单标签</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>在网页中显示默认样式的水平线。</li>
+</ul>
+<h3 id="（4）换行标签"><a href="#（4）换行标签" class="headerlink" title="（4）换行标签"></a>（4）换行标签</h3><ul>
+<li>单词缩写：break 打断，换行</li>
+<li>在HTML中，一个段落中的文字会从左到右依次排列，知道浏览器窗口的右端，然后自动换行。如果希望某段文本强制换行显示，就需要使用换行标签。</li>
+<li>单标签</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="（5）div-span标签"><a href="#（5）div-span标签" class="headerlink" title="（5）div span标签"></a>（5）div span标签</h3><ul>
+<li>div就是division的缩写</li>
+<li>span 跨度，跨距；范围</li>
+<li>div和span是没有语义的，是网页布局主要的两个盒子</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span> 这是头部 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>今日价格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="3、文本格式化标签"><a href="#3、文本格式化标签" class="headerlink" title="3、文本格式化标签"></a>3、文本格式化标签</h2><ul>
+<li>在网页中，有时需要为文字设置粗体、斜体或下划线效果，这时就需要用到HTML中的文本格式化标签，使文字以特殊方式显示。</li>
+<li>表格中的标签不带内左右不带空格，因为CSDN不加空格显示不出来</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">显示效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt; b &gt;&lt; &#x2F;b &gt;，&lt; strong &gt;&lt; &#x2F;strong &gt;</td>
+<td align="center">文字以粗体方式显示（XHTML推荐使用strong）</td>
+</tr>
+<tr>
+<td align="center">&lt; i &gt;&lt; &#x2F;i &gt;，&lt; em &gt;&lt; &#x2F;em&gt;</td>
+<td align="center">文字以斜体方式显示（XHTML推荐使用em）</td>
+</tr>
+<tr>
+<td align="center">&lt; s &gt;&lt; &#x2F;s &gt;，&lt; del &gt;&lt; &#x2F;del &gt;</td>
+<td align="center">文字以加删除线方式显示（XHTML推荐使用del ）</td>
+</tr>
+<tr>
+<td align="center">&lt; u &gt;&lt; &#x2F;u &gt;，&lt; ins &gt;&lt; &#x2F;ins &gt;</td>
+<td align="center">文字以加下划线方式显示（XHTML推荐使用ins）</td>
+</tr>
+</tbody></table>
+<ul>
+<li>四列的后者语义更强烈</li>
+</ul>
+<h2 id="4、标签属性"><a href="#4、标签属性" class="headerlink" title="4、标签属性"></a>4、标签属性</h2><ul>
+<li>属性就是特性，使用HTML制作网页时，如果想让HTML标签提供更多的信息，可以使用HTML标签的属性加以设置，其基本语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>标签名</span> <span class="token attr-name">属性1</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>属性值1<span class="token punctuation">"</span></span> <span class="token attr-name">属性2</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>属性值2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>标签名</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>标签可以拥有多个属性，必须写在开始标签中，位于标签名后面。</li>
+<li>属性之间不分先后顺序，标签名与属性、属性与属性之间均用空格分开。</li>
+<li>任何标签的属性都有默认值，省略该属性则取默认值。</li>
+<li>采取 键值对 的格式 key&#x3D;“value”</li>
+<li>比如 水平线长度（宽）width为400，颜色为红色</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>400<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="5、图像标签"><a href="#5、图像标签" class="headerlink" title="5、图像标签"></a>5、图像标签</h2><ul>
+<li>单词缩写：image 图像</li>
+<li>图像标签的语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图像URL<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>图像标签的属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">属性值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">src</td>
+<td align="center">URL</td>
+<td>图像的路径</td>
+</tr>
+<tr>
+<td align="center">alt</td>
+<td align="center">文本</td>
+<td>图像不能显示时的替换文本</td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">文本</td>
+<td>鼠标悬停时显示的内容</td>
+</tr>
+<tr>
+<td align="center">width</td>
+<td align="center">像素（XHTML不支持%页面百分比）</td>
+<td>设置图像的宽度</td>
+</tr>
+<tr>
+<td align="center">alt</td>
+<td align="center">像素（XHTML不支持%页面百分比）</td>
+<td>设置图像的高度</td>
+</tr>
+<tr>
+<td align="center">border</td>
+<td align="center">数字</td>
+<td>设置图像边框的宽度</td>
+</tr>
+</tbody></table>
+<h2 id="6、链接标签"><a href="#6、链接标签" class="headerlink" title="6、链接标签"></a>6、链接标签</h2><ul>
+<li>单词缩写：anchor 锚</li>
+<li>创建超链接，需要用链接标签环绕被链接的对象即可，语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>跳转目标<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>目标窗口的弹出方式<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>文本或图像<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><p>href：用于指定链接目标的url地址，当为标签应用href属性时，它就具有了超链接的功能。Hypertext Reference的缩写</p>
+</li>
+<li><p>target：用于指定链接页面的打开方式，其取值有_self和_blank两种，其中_self为默认值，_blank为在新窗口中打开方式。</p>
+</li>
+<li><p>注意：</p>
+<p>  （1）外部链接 需要添加 http:&#x2F;&#x2F;<br>  （2）内部链接 直接链接内部页面名称即可，比如 &lt; a href&#x3D;“index.hrml”&gt;首页&lt; &#x2F;a&gt;<br>  （3）如果当时没有确定链接目标时，通常将链接标签的href属性值定义为#，表示该链接暂时为一个空链接。<br>  （4）不仅可以创建文本超链接，在网页中的各种元素，如图像、表格、音频、视频等都可以添加超链接。</p>
+</li>
+</ul>
+<h2 id="7、锚点定位"><a href="#7、锚点定位" class="headerlink" title="7、锚点定位"></a>7、锚点定位</h2><ul>
+<li>通过创建锚点链接，用户能快速定位到目标内容；比如CSDN博客的目录。</li>
+<li>创建锚点链接分两步：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">1、使用以下语句创建链接文本
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#id名<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>链接文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+2、使用相应的id名标注跳转目标的位置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="8、base标签"><a href="#8、base标签" class="headerlink" title="8、base标签"></a>8、base标签</h2><ul>
+<li>base可以设置整体链接的打开状态</li>
+<li>比如把链接都设置为新窗口打开</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>base</span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="9、特殊字符"><a href="#9、特殊字符" class="headerlink" title="9、特殊字符"></a>9、特殊字符</h2><ul>
+<li>HTML为这些特殊字符准备了专门的替代代码，可以用于CSDN博文。</li>
+<li>字符的代码中，&amp;后没有空格，在CSDN博文中不加就被当特殊字符转义了</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>特殊字符</th>
+<th>描述</th>
+<th>字符的代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>空格</td>
+<td>&amp; nbsp;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td>&amp; lt;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>小于号</td>
+<td>&amp; gt;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>小于号</td>
+<td>&amp; amp;</td>
+</tr>
+<tr>
+<td>￥</td>
+<td>人名币</td>
+<td>&amp; yen;</td>
+</tr>
+<tr>
+<td>©</td>
+<td>版权</td>
+<td>&amp; copy;</td>
+</tr>
+<tr>
+<td>®</td>
+<td>注册商标</td>
+<td>&amp; reg;</td>
+</tr>
+<tr>
+<td>°</td>
+<td>摄氏度</td>
+<td>&amp; deg;</td>
+</tr>
+<tr>
+<td>±</td>
+<td>正负号</td>
+<td>&amp; plusmn;</td>
+</tr>
+<tr>
+<td>×</td>
+<td>乘号</td>
+<td>&amp; times;</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>除号</td>
+<td>&amp; divide;</td>
+</tr>
+<tr>
+<td>²</td>
+<td>平方（上标2）</td>
+<td>&amp; sup2;</td>
+</tr>
+<tr>
+<td>³</td>
+<td>立方（上标3）</td>
+<td>&amp; sup3;</td>
+</tr>
+</tbody></table>
+<h2 id="10、注释标签"><a href="#10、注释标签" class="headerlink" title="10、注释标签"></a>10、注释标签</h2><ul>
+<li>如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 注释语句 --></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>注释内容不会显示在浏览器窗口中，但是作为HTML文档的一部分，也会被下载到用户的计算机上，查看源代码时就可以看到。</li>
+</ul>
+<h2 id="11、路径"><a href="#11、路径" class="headerlink" title="11、路径"></a>11、路径</h2><ul>
+<li><p>路径可以分为：相对路径和绝对路径</p>
+</li>
+<li><p>相对路径：</p>
+<p>  （1）图像文件和HTML文件位于同一文件夹：只需要输入图像文件的名称即可。<br>  （2）图像文件位于HTML文件的下一级文件夹：输入文件夹和文件名，之间用&#x2F;分开。<br>  （3）图像文件位于HTML文件的上一级文件夹：在文件名之前加“…&#x2F;”，如果是上两级，则需要使用“…&#x2F;…&#x2F;”，以此类推。</p>
+</li>
+<li><p>绝对路径：完整的地址信息。</p>
+</li>
+</ul>
+<h2 id="12、列表标签"><a href="#12、列表标签" class="headerlink" title="12、列表标签"></a>12、列表标签</h2><ul>
+<li>容器内装载着文字或者图表的一种形式，叫列表。</li>
+<li>列表最大的特点是整齐、有序。</li>
+<li>列表分为无序列表、有序列表和自定义列表。</li>
+</ul>
+<h3 id="1-无序列表-ul"><a href="#1-无序列表-ul" class="headerlink" title="(1)无序列表 ul"></a>(1)无序列表 ul</h3><ul>
+<li>无序列表的各个列表项之间没有顺序级别之分，是并列的。基本语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	···
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>注意事项：</li>
+</ul>
+<blockquote>
+<p>&lt; ul&gt;&lt; &#x2F;ul&gt;中只能嵌套&lt; li&gt;&lt; &#x2F;li&gt;，直接在无序列表标签中输入其他标签或者文字的做法是不允许的。<br>&lt; li&gt;与&lt; &#x2F;li&gt;之间相当于一个容器，可以容纳所有元素。<br>无序列表会带有自己的样式属性。</p>
+</blockquote>
+<h3 id="2-有序列表-ol"><a href="#2-有序列表-ol" class="headerlink" title="(2)有序列表 ol"></a>(2)有序列表 ol</h3><ul>
+<li>有序列表即为有排列顺序的列表，其各个列表项按照一定的顺序排列定义，有序列表的基本语法格式如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>列表项3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+	···
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-自定义列表"><a href="#3-自定义列表" class="headerlink" title="(3)自定义列表"></a>(3)自定义列表</h3><ul>
+<li>自定义列表常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。其基本语法如下：</li>
+</ul>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>名词1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词1解释1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词1解释2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	···
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>名词2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词2解释1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span>名词2解释2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay-qrcode.jpg"><img loading="lazy" src="/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/qqpay-qrcode.jpg"><img loading="lazy" src="/images/qqpay-qrcode.jpg" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/wechatpay-qrcode.jpg"><img loading="lazy" src="/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Explorer</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://ccsu.top/posts/a0c9f462/" title="HTML入门与实战">http://ccsu.top/posts/a0c9f462/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/c473cc2a/" rel="prev" title="HTML状态消息"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">HTML状态消息</span></a></div><div class="post-nav-item"></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><script src="/js/comments/waline.js" type="module" defer></script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002891号-2</a></div><div class="copyright"><span>&copy; 2016 – 2022 </span><span class="with-love" id="animate" title="赞助者们"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Explorer</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.0.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.8</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2022-02-12T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} Days ${passHour} Hours ${passMinute} Minutes ${passSecond} Seconds`;
+}
+blog_live_time();
+</script></div><div id="busuanzi"><span id="busuanzi_container_site_pv" title="Total Views"><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg></span><span id="busuanzi_value_site_pv"></span></span><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#6200ee" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="Search"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="/js/search/local-search.js" defer type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="Searching..." value=""></div><div id="local-search-result"></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","9-18"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":350,"hOffset":null,"vOffset":null},"mobile":{"show":true},"log":false});</script></body></html>
