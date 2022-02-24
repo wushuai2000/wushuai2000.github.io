@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>计算机存储容量单位换算</title>
+      <link href="/posts/3b245245/"/>
+      <url>/posts/3b245245/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><p>1、比特Bit(位、b)：表示信息的最小单位，即计算机最小的存储单位，是二进制数的一位包含的信息或2个选项中特别指定1个的需要信息量【它代表从一个二进制数组中选出一元（0或1）所提供的信息量（若此二元出现的概率相等）】</p><p>2、字节Byte(B)：二进制数据的单位，计算机中数据基本单位，一个字节通常8位长。各种信息在计算机中存储、处理至少需要一个字节。例一个ASCII码用一个字节表示，一个汉字用两个字节表示</p><p>3、千字节Kilobytes(KB)：计算机存储容量的单位，也常用KB来表示。1KB&#x3D;1024字节</p><p>4、兆字节Megabytes(MB)：计算机存储容量的单位，也常用MB来表示。1MB&#x3D;1024*1024字节</p><p>5、吉字节Gigabyte(GB) ：又称千兆字节，是计算机存储容量单位，简称GB，是兆字节(MB)的1024倍，即 1024MB。</p><p>6、太字节terabyte(TB)：计算机存储容量单位，也常用TB来表示。1TB&#x3D;1024GB&#x3D;2^40字节。</p><p>PS：KB（即baiK）、MB（即M）、GB（即G）等都是基于字节换算的存储单位。</p><h1 id="二、转换"><a href="#二、转换" class="headerlink" title="二、转换"></a>二、转换</h1><pre class="line-numbers language-c" data-language="c"><code class="language-c">字节<span class="token punctuation">(</span>Byte<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">8</span>位<span class="token punctuation">(</span>bit<span class="token punctuation">)</span>                               <span class="token number">1</span>B<span class="token operator">=</span><span class="token number">8</span>b <span class="token number">1</span>KB<span class="token punctuation">(</span> Kilobyte，千字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>B                      <span class="token number">1</span>KB<span class="token operator">=</span><span class="token number">1024</span>B <span class="token number">1</span>MB<span class="token punctuation">(</span> Megabyte，兆字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>KB                     <span class="token number">1</span>MB<span class="token operator">=</span><span class="token number">1024</span>KB <span class="token number">1</span>GB<span class="token punctuation">(</span> Gigabyte，吉字节，千兆<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>MB               <span class="token number">1</span>GB<span class="token operator">=</span><span class="token number">1024</span>MB <span class="token number">1</span>TB<span class="token punctuation">(</span> Trillionbyte，万亿字节，太字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>GB       <span class="token number">1</span>TB<span class="token operator">=</span><span class="token number">1024</span>GB <span class="token number">1</span>PB<span class="token punctuation">(</span> Petabyte，千万亿字节，拍字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>TB         <span class="token number">1</span>PB<span class="token operator">=</span><span class="token number">1024</span>TB <span class="token number">1</span>EB<span class="token punctuation">(</span> Exabyte，百亿亿字节，艾字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>PB          <span class="token number">1</span>EB<span class="token operator">=</span><span class="token number">1024</span>PB <span class="token number">1</span>ZB<span class="token punctuation">(</span>Zettabyte，十万亿亿字节，泽字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>EB       <span class="token number">1</span>ZB<span class="token operator">=</span><span class="token number">1024</span>EB <span class="token number">1</span>YB<span class="token punctuation">(</span> Yottabyte，一亿亿亿字节，尧字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>ZB      <span class="token number">1</span>YB<span class="token operator">=</span><span class="token number">1024</span>ZB    <span class="token number">1</span>BB<span class="token punctuation">(</span> Brontobyte，千亿亿亿字节<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1024</span>YB             <span class="token number">1</span>BB<span class="token operator">=</span><span class="token number">1024</span>YB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在线转换工具：<a href="https://calc.itzmx.com/">PC字节计算器</a></p><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220224141737.png" alt="image-20220224141737338" loading="lazy"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 嵌入式 </category>
+          
+          <category> 计算机等级考试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌入式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>安装hexo主题yun</title>
       <link href="/posts/17723abd/"/>
       <url>/posts/17723abd/</url>
