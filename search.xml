@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>katex测试</title>
+      <link href="/posts/c441e7e0/"/>
+      <url>/posts/c441e7e0/</url>
+      
+        <content type="html"><![CDATA[<p>$$<br>A &#x3D; \begin{bmatrix}<br>        a_{11}    &amp; a_{12}    &amp; …    &amp; a_{1n}\<br>        a_{21}    &amp; a_{22}    &amp; …    &amp; a_{2n}\<br>        a_{31}    &amp; a_{22}    &amp; …    &amp; a_{3n}\<br>        \vdots    &amp; \vdots    &amp; \ddots &amp; \vdots\<br>        a_{n1}    &amp; a_{n2}    &amp; … &amp; a_{nn}\<br>    \end{bmatrix} , b &#x3D; \begin{bmatrix}<br>        b_{1}  \<br>        b_{2}  \<br>        b_{3}  \<br>        \vdots \<br>        b_{n}  \<br>    \end{bmatrix}<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 考研408 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机组成原理 </tag>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计组-第七章 输入输出系统</title>
       <link href="/posts/24f1e69a/"/>
       <url>/posts/24f1e69a/</url>

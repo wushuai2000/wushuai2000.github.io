@@ -6,7 +6,7 @@
   <link href="http://ccsu.top/atom.xml" rel="self"/>
   
   <link href="http://ccsu.top/"/>
-  <updated>2023-04-13T16:00:00.000Z</updated>
+  <updated>2023-06-22T16:00:00.000Z</updated>
   <id>http://ccsu.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>katex测试</title>
+    <link href="http://ccsu.top/posts/c441e7e0/"/>
+    <id>http://ccsu.top/posts/c441e7e0/</id>
+    <published>2023-06-22T16:00:00.000Z</published>
+    <updated>2023-06-22T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>$$<br>A &#x3D; \begin{bmatrix}<br>        a_{11}    &amp; a_{12}    &amp; …    &amp; a_{1n}\<br>        a_{21}    &amp; a_{22}    &amp; …    &amp; a_{2n}\<br>        a_{31}    &amp; a_{22}    &amp; …    &amp; a_{3n}\<br>        \vdots    &amp; \vdots    &amp; \ddots &amp; \vdots\<br>        a_{n1}    &amp; a_{n2}    &amp; … &amp; a_{nn}\<br>    \end{bmatrix} , b &#x3D; \begin{bmatrix}<br>        b_{1}  \<br>        b_{2}  \<br>        b_{3}  \<br>        \vdots \<br>        b_{n}  \<br>    \end{bmatrix}<br>$$</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;$$&lt;br&gt;A &amp;#x3D; \begin{bmatrix}&lt;br&gt;        a_{11}    &amp;amp; a_{12}    &amp;amp; …    &amp;amp; a_{1n}\&lt;br&gt;        a_{21}    &amp;amp; a_{22}    &amp;amp; …</summary>
+      
+    
+    
+    
+    <category term="考研408" scheme="http://ccsu.top/categories/%E8%80%83%E7%A0%94408/"/>
+    
+    
+    <category term="计算机组成原理" scheme="http://ccsu.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="考研" scheme="http://ccsu.top/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
   
   <entry>
     <title>计组-第七章 输入输出系统</title>
@@ -503,33 +529,6 @@
     
     
     <category term="Python基础" scheme="http://ccsu.top/tags/Python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派系统备份</title>
-    <link href="http://ccsu.top/posts/52784c40/"/>
-    <id>http://ccsu.top/posts/52784c40/</id>
-    <published>2022-03-13T12:18:00.000Z</published>
-    <updated>2022-05-09T01:59:12.398Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一、全卡备份"><a href="#一、全卡备份" class="headerlink" title="一、全卡备份"></a>一、全卡备份</h1><p>全卡备份就是直接从SD卡A复制到SD卡B</p><h2 id="1-通过GUI备份"><a href="#1-通过GUI备份" class="headerlink" title="1.通过GUI备份"></a>1.通过GUI备份</h2><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220312232048.png" alt="image-20220312232048461" loading="lazy"></p><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220312232726.png" alt="image-20220312232726142" loading="lazy"></p><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220312232403.png" alt="image-20220312232403516" loading="lazy"></p><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220312232959.png" alt="image-20220312232959086" loading="lazy"></p><h2 id="2-命令行备份"><a href="#2-命令行备份" class="headerlink" title="2.命令行备份"></a>2.命令行备份</h2><blockquote><p>  实测，太慢了</p></blockquote><p>更新源</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">sudo apt update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><code>mmcblk0</code>是SD卡A，<code>sda</code>是SD卡B，从A复制到B</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">pi@raspberrypi:~ $ lsblkNAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTsda           8:0    1 59.5G  0 disk ├─sda1        8:1    1  256M  0 part └─sda2        8:2    1 59.2G  0 part mmcblk0     179:0    0 59.5G  0 disk ├─mmcblk0p1 179:1    0  256M  0 part &#x2F;boot└─mmcblk0p2 179:2    0 59.2G  0 part &#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>安装<code>dc3dd</code></p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">sudo apt install dc3dd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>备份</p><p><code>if</code>表示要备份的卡，<code>of</code>表示要备份到的卡</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">sudo dc3dd if&#x3D;&#x2F;dev&#x2F;mmcblk0 of&#x3D;&#x2F;dev&#x2F;sda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220313001259.png" alt="image-20220313001259177" loading="lazy"></p><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220313013246.png" alt="image-20220313013246475" loading="lazy"></p><h1 id="二、压缩备份"><a href="#二、压缩备份" class="headerlink" title="二、压缩备份"></a>二、压缩备份</h1><p>压缩备份是它会备份整个<code>boot</code>分区，然后<code>Root</code>分区它只会备份实际使用的容量</p><p>待续。。。。。。。。。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;一、全卡备份&quot;&gt;&lt;a href=&quot;#一、全卡备份&quot; class=&quot;headerlink&quot; title=&quot;一、全卡备份&quot;&gt;&lt;/a&gt;一、全卡备份&lt;/h1&gt;&lt;p&gt;全卡备份就是直接从SD卡A复制到SD卡B&lt;/p&gt;
-&lt;h2 id=&quot;1-通过GUI备份&quot;&gt;&lt;a href=&quot;#</summary>
-      
-    
-    
-    
-    <category term="毕业设计" scheme="http://ccsu.top/categories/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-    
-    <category term="树莓派" scheme="http://ccsu.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-    <category term="备份" scheme="http://ccsu.top/tags/%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
