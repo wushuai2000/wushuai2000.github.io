@@ -24,53 +24,70 @@ document.addEventListener("pjax:success", initScrollReveal);
   }
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(bp, s);
-})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="一、Zstack协议栈概述什么是Zstack协议栈为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。  ​    Z-STACK的发展 ​    由0.01版本 到 1.5.1a.. ​    mesh: 之前的升级版本 ​    HA:">
+})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="一、Zstack协议栈概述 什么是Zstack协议栈 为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。  ​ Z-STACK的发展 ​ 由0.01版本 到 1.5.1a.. ​ mesh: 之前的升级版本 ​ HA: 家庭自动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Zstack协议栈">
 <meta property="og:url" content="http://ccsu.top/posts/3fbe36e5/index.html">
 <meta property="og:site_name" content="explorerの博客">
-<meta property="og:description" content="一、Zstack协议栈概述什么是Zstack协议栈为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。  ​    Z-STACK的发展 ​    由0.01版本 到 1.5.1a.. ​    mesh: 之前的升级版本 ​    HA:">
+<meta property="og:description" content="一、Zstack协议栈概述 什么是Zstack协议栈 为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。  ​ Z-STACK的发展 ​ 由0.01版本 到 1.5.1a.. ​ mesh: 之前的升级版本 ​ HA: 家庭自动">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130146.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130152.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130157.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130201.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130206.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130210.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130215.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130219.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130223.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130227.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130231.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130234.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130239.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185136.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185224.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20210527185047.png">
 <meta property="article:published_time" content="2021-05-27T13:57:08.000Z">
 <meta property="article:modified_time" content="2021-05-27T13:57:08.000Z">
 <meta property="article:author" content="Explorer">
 <meta property="article:tag" content="ZigBee">
 <meta property="article:tag" content="协议栈">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130146.png"><script>(function() {
+<meta name="twitter:card" content="summary"><script>(function() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   const setting = localStorage.getItem('darken-mode') || 'auto'
   if (setting === 'dark' || (prefersDark && setting !== 'light'))
     document.documentElement.classList.toggle('dark', true)
-})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Explorer"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="Explorer"><span class="site-author-status" title="努力学习">😄</span></a><div class="site-author-name"><a href="/about/">Explorer</a></div><span class="site-name">explorerの博客</span><sub class="site-subtitle"></sub><div class="site-desciption">前路漫漫，当克己，当慎独!</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">74</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">18</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">64</span></a></div><a class="site-state-item hty-icon-button" href="/about/" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/wushuai2000" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=549838440" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/huan-ji-91-3/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/345844264" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:2506812280@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/albums/" title="相册" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81Zstack%E5%8D%8F%E8%AE%AE%E6%A0%88%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、Zstack协议栈概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFZstack%E5%8D%8F%E8%AE%AE%E6%A0%88"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Zstack协议栈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Zstack%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">二、Zstack协议栈结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">1.工程目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-main%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90"><span class="toc-number">2.2.</span> <span class="toc-text">2.main函数解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-APP%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">3.APP层解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-ZDO%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.4.</span> <span class="toc-text">4.ZDO层解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-NWK%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.5.</span> <span class="toc-text">5.NWK层解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">2.5.1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="toc-number">2.5.2.</span> <span class="toc-text">网络拓扑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.5.3.</span> <span class="toc-text">网络参数设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-HAL%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.6.</span> <span class="toc-text">6.HAL层解析</span></a></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/57%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/" style="font-size: 12px; color: #999">57步进电机</a> <a href="/tags/AT9SPro/" style="font-size: 12px; color: #999">AT9SPro</a> <a href="/tags/Anaconda/" style="font-size: 12px; color: #999">Anaconda</a> <a href="/tags/Arduino/" style="font-size: 24px; color: #3383cd">Arduino</a> <a href="/tags/CUDA/" style="font-size: 18px; color: #668eb3">CUDA</a> <a href="/tags/CUDNN/" style="font-size: 12px; color: #999">CUDNN</a> <a href="/tags/Conda/" style="font-size: 12px; color: #999">Conda</a> <a href="/tags/DHT11/" style="font-size: 12px; color: #999">DHT11</a> <a href="/tags/Docker/" style="font-size: 18px; color: #668eb3">Docker</a> <a href="/tags/ESP8266/" style="font-size: 12px; color: #999">ESP8266</a> <a href="/tags/GPIO/" style="font-size: 30px; color: #0078e7">GPIO</a> <a href="/tags/GPS/" style="font-size: 12px; color: #999">GPS</a> <a href="/tags/GPU/" style="font-size: 24px; color: #3383cd">GPU</a> <a href="/tags/HC-05/" style="font-size: 12px; color: #999">HC-05</a> <a href="/tags/HTML/" style="font-size: 18px; color: #668eb3">HTML</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #668eb3">Hexo</a> <a href="/tags/Hexo%E5%AE%89%E8%A3%85/" style="font-size: 24px; color: #3383cd">Hexo安装</a> <a href="/tags/IAR%E8%BD%AF%E4%BB%B6/" style="font-size: 12px; color: #999">IAR软件</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #668eb3">JavaScript</a> <a href="/tags/Json/" style="font-size: 12px; color: #999">Json</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#6200ee;"><link itemprop="mainEntityOfPage" href="http://ccsu.top/posts/3fbe36e5/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Explorer"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="explorerの博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Zstack协议栈</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">Posted on</span> <time title="Created: 2021-05-27 21:57:08" itemprop="dateCreated datePublished" datetime="2021-05-27T21:57:08+08:00">2021-05-27</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="Word count in article"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="Word count in article">2.2k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Reading time"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="Reading time">9m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/ZigBee/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">ZigBee</span></a></span> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">课程设计</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/ZigBee/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">ZigBee</span></a><a class="tag-item" href="/tags/%E5%8D%8F%E8%AE%AE%E6%A0%88/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">协议栈</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="一、Zstack协议栈概述"><a href="#一、Zstack协议栈概述" class="headerlink" title="一、Zstack协议栈概述"></a>一、Zstack协议栈概述</h1><h2 id="什么是Zstack协议栈"><a href="#什么是Zstack协议栈" class="headerlink" title="什么是Zstack协议栈"></a>什么是Zstack协议栈</h2><p>为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。</p>
+})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Explorer"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="Explorer"><span class="site-author-status" title="努力学习">😄</span></a><div class="site-author-name"><a href="/about/">Explorer</a></div><span class="site-name">explorerの博客</span><sub class="site-subtitle"></sub><div class="site-desciption">前路漫漫，当克己，当慎独!</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">74</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">18</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">64</span></a></div><a class="site-state-item hty-icon-button" href="/about/" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/wushuai2000" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=549838440" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/huan-ji-91-3/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/345844264" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:2506812280@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/albums/" title="相册" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80zstack%E5%8D%8F%E8%AE%AE%E6%A0%88%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">一、Zstack协议栈概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFzstack%E5%8D%8F%E8%AE%AE%E6%A0%88"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Zstack协议栈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8Czstack%E5%8D%8F%E8%AE%AE%E6%A0%88%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">二、Zstack协议栈结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">1.工程目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#main%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90"><span class="toc-number">2.2.</span> <span class="toc-text">2.main函数解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">3.APP层解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zdo%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.4.</span> <span class="toc-text">4.ZDO层解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nwk%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.5.</span> <span class="toc-text">5.NWK层解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">2.5.1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="toc-number">2.5.2.</span> <span class="toc-text">网络拓扑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.5.3.</span> <span class="toc-text">网络参数设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hal%E5%B1%82%E8%A7%A3%E6%9E%90"><span class="toc-number">2.6.</span> <span class="toc-text">6.HAL层解析</span></a></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/57%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/" style="font-size: 12px; color: #999">57步进电机</a> <a href="/tags/AT9SPro/" style="font-size: 12px; color: #999">AT9SPro</a> <a href="/tags/Anaconda/" style="font-size: 12px; color: #999">Anaconda</a> <a href="/tags/Arduino/" style="font-size: 24px; color: #3383cd">Arduino</a> <a href="/tags/CUDA/" style="font-size: 18px; color: #668eb3">CUDA</a> <a href="/tags/CUDNN/" style="font-size: 12px; color: #999">CUDNN</a> <a href="/tags/Conda/" style="font-size: 12px; color: #999">Conda</a> <a href="/tags/DHT11/" style="font-size: 12px; color: #999">DHT11</a> <a href="/tags/Docker/" style="font-size: 18px; color: #668eb3">Docker</a> <a href="/tags/ESP8266/" style="font-size: 12px; color: #999">ESP8266</a> <a href="/tags/GPIO/" style="font-size: 30px; color: #0078e7">GPIO</a> <a href="/tags/GPS/" style="font-size: 12px; color: #999">GPS</a> <a href="/tags/GPU/" style="font-size: 24px; color: #3383cd">GPU</a> <a href="/tags/HC-05/" style="font-size: 12px; color: #999">HC-05</a> <a href="/tags/HTML/" style="font-size: 18px; color: #668eb3">HTML</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #668eb3">Hexo</a> <a href="/tags/Hexo%E5%AE%89%E8%A3%85/" style="font-size: 24px; color: #3383cd">Hexo安装</a> <a href="/tags/IAR%E8%BD%AF%E4%BB%B6/" style="font-size: 12px; color: #999">IAR软件</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #668eb3">JavaScript</a> <a href="/tags/Json/" style="font-size: 12px; color: #999">Json</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#6200ee;"><link itemprop="mainEntityOfPage" href="http://ccsu.top/posts/3fbe36e5/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Explorer"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="explorerの博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Zstack协议栈</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">Posted on</span> <time title="Created: 2021-05-27 21:57:08" itemprop="dateCreated datePublished" datetime="2021-05-27T21:57:08+08:00">2021-05-27</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="Word count in article"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="Word count in article">2.2k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Reading time"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="Reading time">9m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/ZigBee/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">ZigBee</span></a></span> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">课程设计</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/ZigBee/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">ZigBee</span></a><a class="tag-item" href="/tags/%E5%8D%8F%E8%AE%AE%E6%A0%88/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">协议栈</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="一zstack协议栈概述">一、Zstack协议栈概述</h1>
+<h2 id="什么是zstack协议栈">什么是Zstack协议栈</h2>
+<p>为了使Zigbee的开发更加简单高效，TI公司推出了基于cc2530芯片的协议栈Z-STACK.协议栈的实质就是能实现各个功能的实例框架代码，我们想要实现自己的功能程序，只需要在协议栈的基础上修改或添加即可。</p>
 <ul>
-<li>​    Z-STACK的发展</li>
-<li>​    由0.01版本 到 1.5.1a..</li>
-<li>​    mesh: 之前的升级版本</li>
-<li>​    HA:  家庭自动化(智能家居)</li>
-<li>​    SE:  智能能源</li>
+<li>​ Z-STACK的发展</li>
+<li>​ 由0.01版本 到 1.5.1a..</li>
+<li>​ mesh: 之前的升级版本</li>
+<li>​ HA: 家庭自动化(智能家居)</li>
+<li>​ SE: 智能能源</li>
 </ul>
-<p>​    ….他们的区别是应用部分不同(初学者建议用早期的版本)</p>
-<h1 id="二、Zstack协议栈结构"><a href="#二、Zstack协议栈结构" class="headerlink" title="二、Zstack协议栈结构"></a>二、Zstack协议栈结构</h1><p>​      Z-Stack协议栈符合ZigBee协议，由物理层、MAC层、网络层和应用层组成，由于Z-Stack协议栈是一个半开源的协议栈，MAC层和网络层的部分源代码是非开源的，因此我们学习的开源部分，主要包括main函数、APP层、ZDO层、NWK层和HAL层。</p>
-<h2 id="1-工程目录结构"><a href="#1-工程目录结构" class="headerlink" title="1.工程目录结构"></a>1.工程目录结构</h2><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130146.png" alt="image-20210526141312372" loading="lazy"></p>
-<p><strong>APP</strong>： 应用层目录， 这是用户创建各种不同工程的区域， 在这个目录中包含了应用层的内容和这个项目的主要内容， 在协议栈里面一般是以操作系统的任务实现的。<br><strong>HAL</strong>： 硬件层目录， 包含有与硬件相关的配置和驱动及操作函数。<br><strong>MAC</strong>： MAC 层目录， 包含了 MAC 层的参数配置文件及其 MAC 的 LIB 库的函数接口文件。<br><strong>MT</strong>： 监控调试层， 主要用于调试目的， 即实现通过串口调试各层， 与各层进行直接交互。<br><strong>NWK</strong>： 网络层目录， 含网络层配置参数文件及网络层库的函数接口文件， APS 层库的函数接口。<br><strong>OSAL</strong>： 协议栈的操作系统。<br><strong>Profile</strong>： AF 层目录， 包含 AF 层处理函数文件。<br><strong>Security</strong>： 安全层目录， 安全层处理函数接口文件， 比如加密函数等。<br><strong>Services</strong>： 地址处理函数目录， 包括着地址模式的定义及地址处理函数。<br><strong>Tools</strong>： 工程配置目录， 包括空间划分及 ZStack 相关配置信息。<br><strong>ZDO</strong>： ZDO 目录。<br><strong>ZMac</strong>： MAC 层目录， 包括 MAC 层参数配置及 MAC 层 LIB 库函数回调处理函数。<br><strong>ZMain</strong>： 主函数目录， 包括入口函数 main（ ） 及硬件配置文件。<br><strong>Output</strong>： 输出文件目录， 这个 EW8051 IDE 自动生成的。    </p>
-<h2 id="2-main函数解析"><a href="#2-main函数解析" class="headerlink" title="2.main函数解析"></a>2.main函数解析</h2><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword">void</span> <span class="token punctuation">)</span>
+<p>​ ....他们的区别是应用部分不同(初学者建议用早期的版本)</p>
+<h1 id="二zstack协议栈结构">二、Zstack协议栈结构</h1>
+<p>​
+Z-Stack协议栈符合ZigBee协议，由物理层、MAC层、网络层和应用层组成，由于Z-Stack协议栈是一个半开源的协议栈，MAC层和网络层的部分源代码是非开源的，因此我们学习的开源部分，主要包括main函数、APP层、ZDO层、NWK层和HAL层。</p>
+<h2 id="工程目录结构">1.工程目录结构</h2>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130146.png"
+alt="image-20210526141312372" />
+<figcaption aria-hidden="true">image-20210526141312372</figcaption>
+</figure>
+<p><strong>APP</strong>： 应用层目录， 这是用户创建各种不同工程的区域，
+在这个目录中包含了应用层的内容和这个项目的主要内容，
+在协议栈里面一般是以操作系统的任务实现的。 <strong>HAL</strong>：
+硬件层目录， 包含有与硬件相关的配置和驱动及操作函数。
+<strong>MAC</strong>： MAC 层目录， 包含了 MAC 层的参数配置文件及其 MAC
+的 LIB 库的函数接口文件。 <strong>MT</strong>： 监控调试层，
+主要用于调试目的， 即实现通过串口调试各层， 与各层进行直接交互。
+<strong>NWK</strong>： 网络层目录，
+含网络层配置参数文件及网络层库的函数接口文件， APS 层库的函数接口。
+<strong>OSAL</strong>： 协议栈的操作系统。 <strong>Profile</strong>： AF
+层目录， 包含 AF 层处理函数文件。 <strong>Security</strong>：
+安全层目录， 安全层处理函数接口文件， 比如加密函数等。
+<strong>Services</strong>： 地址处理函数目录，
+包括着地址模式的定义及地址处理函数。 <strong>Tools</strong>：
+工程配置目录， 包括空间划分及 ZStack 相关配置信息。
+<strong>ZDO</strong>： ZDO 目录。 <strong>ZMac</strong>： MAC 层目录，
+包括 MAC 层参数配置及 MAC 层 LIB 库函数回调处理函数。
+<strong>ZMain</strong>： 主函数目录， 包括入口函数 main（ ）
+及硬件配置文件。 <strong>Output</strong>： 输出文件目录， 这个 EW8051
+IDE 自动生成的。</p>
+<h2 id="main函数解析">2.main函数解析</h2>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword">void</span> <span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
 	<span class="token comment">/* 关闭所有中断*/</span>
 	<span class="token function">osal_int_disable</span><span class="token punctuation">(</span> INTS_ALL <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -91,9 +108,6 @@ document.addEventListener("pjax:success", initScrollReveal);
 	<span class="token comment">/*初始化NV向量*/</span>
 	<span class="token function">zgInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">	<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">NONWK</span></span>
 	<span class="token comment">/* AF层初始化/
 	afInit();
@@ -117,8 +131,7 @@ document.addEventListener("pjax:success", initScrollReveal);
 	<span class="token function">osal_start_system</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>​    <strong>osal_int_disable()</strong></p>
+<p>​ <strong>osal_int_disable()</strong></p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">uint8 <span class="token function">osal_int_disable</span><span class="token punctuation">(</span> uint8 interrupt_id <span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
 <span class="token comment">/*判断ID是否为中断ID*/</span>
@@ -136,8 +149,8 @@ INVALID_INTERRUPT_ID*/</span>
 <span class="token keyword">return</span> <span class="token punctuation">(</span> INVALID_INTERRUPT_ID <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-APP层解析"><a href="#3-APP层解析" class="headerlink" title="3.APP层解析"></a>3.APP层解析</h2><p>OSAL_SampleApp.c中包含osalInitTasks()与taskArr[]。</p>
+<h2 id="app层解析">3.APP层解析</h2>
+<p>OSAL_SampleApp.c中包含osalInitTasks()与taskArr[]。</p>
 <p><strong>osalInitTasks()函数主要功能是为任务分配空间</strong></p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">osalInitTasks</span><span class="token punctuation">(</span> <span class="token keyword">void</span> <span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -160,8 +173,12 @@ INVALID_INTERRUPT_ID*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
     <span class="token function">SampleApp_Init</span><span class="token punctuation">(</span> taskID <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130152.png" alt="image-20210526142358533" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130152.png"
+alt="image-20210526142358533" />
+<figcaption aria-hidden="true">image-20210526142358533</figcaption>
+</figure>
 <p><strong>OSAL_SampleApp.c</strong></p>
 <p><strong>tasksArr中存放了事件处理回调函数</strong></p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">const</span> pTaskEventHandlerFn tasksArr<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
@@ -181,12 +198,22 @@ INVALID_INTERRUPT_ID*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
     SampleApp_ProcessEvent
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130157.png" alt="image-20210526142515869" loading="lazy"></p>
-<p><strong>Z-Stack协议栈的APP层主要功能是实现用户定义的事件，APP层由5个文件组成</strong>    </p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130201.png" alt="image-20210526142553502" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130157.png"
+alt="image-20210526142515869" />
+<figcaption aria-hidden="true">image-20210526142515869</figcaption>
+</figure>
+<p><strong>Z-Stack协议栈的APP层主要功能是实现用户定义的事件，APP层由5个文件组成</strong></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130201.png"
+alt="image-20210526142553502" />
+<figcaption aria-hidden="true">image-20210526142553502</figcaption>
+</figure>
 <blockquote>
-<p>  SamplApp.c文件主要有两个功能：<br>      (1)对应用层用户定义的任务<br>      (2)进行初始化；调用事件处理函数。</p>
+<p>SamplApp.c文件主要有两个功能： (1)对应用层用户定义的任务
+(2)进行初始化；调用事件处理函数。</p>
 </blockquote>
 <ul>
 <li>用户任务初始化函数SampleApp_Init()</li>
@@ -219,8 +246,12 @@ INVALID_INTERRUPT_ID*/</span>
     SampleApp_Flash_DstAddr<span class="token punctuation">.</span>addrMode <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">afAddrMode_t</span><span class="token punctuation">)</span>afAddrGroup<span class="token punctuation">;</span>
     SampleApp_Flash_DstAddr<span class="token punctuation">.</span>endPoint <span class="token operator">=</span> SAMPLEAPP_ENDPOINT<span class="token punctuation">;</span>
     SampleApp_Flash_DstAddr<span class="token punctuation">.</span>addr<span class="token punctuation">.</span>shortAddr <span class="token operator">=</span> SAMPLEAPP_FLASH_GROUP<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130206.png" alt="image-20210526143651898" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130206.png"
+alt="image-20210526143651898" />
+<figcaption aria-hidden="true">image-20210526143651898</figcaption>
+</figure>
 <p><strong>SampleApp_Init()</strong></p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">SampleApp_epDesc<span class="token punctuation">.</span>endPoint <span class="token operator">=</span> SAMPLEAPP_ENDPOINT<span class="token punctuation">;</span>
 SampleApp_epDesc<span class="token punctuation">.</span>task_id <span class="token operator">=</span> <span class="token operator">&amp;</span>SampleApp_TaskID<span class="token punctuation">;</span>
@@ -239,34 +270,84 @@ SampleApp_Group<span class="token punctuation">.</span>ID <span class="token ope
 <span class="token function">HalLcdWriteString</span><span class="token punctuation">(</span> <span class="token string">"SampleApp"</span><span class="token punctuation">,</span> HAL_LCD_LINE_1 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130210.png" alt="image-20210526143749526" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130210.png"
+alt="image-20210526143749526" />
+<figcaption aria-hidden="true">image-20210526143749526</figcaption>
+</figure>
 <p><strong>SampleApp_ProcessEvent()</strong></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130215.png" alt="image-20210526143838169" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130215.png"
+alt="image-20210526143838169" />
+<figcaption aria-hidden="true">image-20210526143838169</figcaption>
+</figure>
 <p><strong>SampleApp_ProcessEvent()</strong></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130219.png" alt="image-20210526143903337" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130219.png"
+alt="image-20210526143903337" />
+<figcaption aria-hidden="true">image-20210526143903337</figcaption>
+</figure>
 <p><strong>SampleApp_HandleKeys()</strong></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130223.png" alt="image-20210526143922288" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130223.png"
+alt="image-20210526143922288" />
+<figcaption aria-hidden="true">image-20210526143922288</figcaption>
+</figure>
 <p><strong>SampleApp_MessageMSGCB()</strong></p>
-<p>SampleApp_MessageMSGCB()函数主要实现数据接收功能，数据的接收通过判断簇ID来<br>与发送端发送的数据进行匹配。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130227.png" alt="image-20210526144842589" loading="lazy"></p>
+<p>SampleApp_MessageMSGCB()函数主要实现数据接收功能，数据的接收通过判断簇ID来
+与发送端发送的数据进行匹配。</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130227.png"
+alt="image-20210526144842589" />
+<figcaption aria-hidden="true">image-20210526144842589</figcaption>
+</figure>
 <p><strong>SampleApp_SendPeriodicMessage()</strong></p>
-<p>SampleApp_SendPeriodicMessage()函数主要功能是实现周期性数据的发送，通过调用<br>AF_DataRequest()函数进行数据的发送。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130231.png" alt="image-20210526144912513" loading="lazy"></p>
+<p>SampleApp_SendPeriodicMessage()函数主要功能是实现周期性数据的发送，通过调用
+AF_DataRequest()函数进行数据的发送。</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130231.png"
+alt="image-20210526144912513" />
+<figcaption aria-hidden="true">image-20210526144912513</figcaption>
+</figure>
 <p><strong>SampleApp.h</strong></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130234.png" alt="image-20210526144937850" loading="lazy"></p>
-<h2 id="4-ZDO层解析"><a href="#4-ZDO层解析" class="headerlink" title="4.ZDO层解析"></a>4.ZDO层解析</h2><p><strong>目录结构</strong></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130239.png" alt="image-20210526145815215" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130234.png"
+alt="image-20210526144937850" />
+<figcaption aria-hidden="true">image-20210526144937850</figcaption>
+</figure>
+<h2 id="zdo层解析">4.ZDO层解析</h2>
+<p><strong>目录结构</strong></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220215130239.png"
+alt="image-20210526145815215" />
+<figcaption aria-hidden="true">image-20210526145815215</figcaption>
+</figure>
 <p>ZDApp_Init()函数：初始化ZDO网络设备短地址；获得64位IEEE地址信息；ZDO层初始化；网络设备启动。</p>
-<h2 id="5-NWK层解析"><a href="#5-NWK层解析" class="headerlink" title="5.NWK层解析"></a>5.NWK层解析</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a><strong>目录结构</strong></h3><p><img src="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185136.png" alt="image-20210527185136679" loading="lazy"></p>
-<h3 id="网络拓扑结构"><a href="#网络拓扑结构" class="headerlink" title="网络拓扑结构"></a><strong>网络拓扑结构</strong></h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*星型网络*/</span>
+<h2 id="nwk层解析">5.NWK层解析</h2>
+<h3 id="目录结构"><strong>目录结构</strong></h3>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185136.png"
+alt="image-20210527185136679" />
+<figcaption aria-hidden="true">image-20210527185136679</figcaption>
+</figure>
+<h3 id="网络拓扑结构"><strong>网络拓扑结构</strong></h3>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*星型网络*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NWK_MODE_STAR</span>         <span class="token expression"><span class="token number">0</span></span></span>
 <span class="token comment">/*树型网络*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NWK_MODE_TREE</span>         <span class="token expression"><span class="token number">1</span></span></span>
 <span class="token comment">/*网状网络*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NWK_MODE_MESH</span>         <span class="token expression"><span class="token number">2</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="网络参数设置"><a href="#网络参数设置" class="headerlink" title="网络参数设置"></a><strong>网络参数设置</strong></h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*协议栈模式参数*/</span>
+<h3 id="网络参数设置"><strong>网络参数设置</strong></h3>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*协议栈模式参数*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NETWORK_SPECIFIC</span>      <span class="token expression"><span class="token number">0</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">HOME_CONTROLS</span>         <span class="token expression"><span class="token number">1</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ZIGBEEPRO_PROFILE</span>    <span class="token expression"><span class="token number">2</span></span></span>
@@ -276,20 +357,23 @@ SampleApp_Group<span class="token punctuation">.</span>ID <span class="token ope
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX_CHANNELS_868MHZ</span>     <span class="token expression"><span class="token number">0x00000001</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX_CHANNELS_915MHZ</span>     <span class="token expression"><span class="token number">0x000007FE</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX_CHANNELS_24GHZ</span>      <span class="token expression"><span class="token number">0x07FFF800</span></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="6-HAL层解析"><a href="#6-HAL层解析" class="headerlink" title="6.HAL层解析"></a>6.HAL层解析</h2><p><img src="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185224.png" alt="20210527184135.png" loading="lazy"></p>
+<h2 id="hal层解析">6.HAL层解析</h2>
+<figure>
+<img
+src="https://raw.githubusercontent.com/Editblog/PicGo/main/img/20210527185224.png"
+alt="20210527184135.png" />
+<figcaption aria-hidden="true">20210527184135.png</figcaption>
+</figure>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">HAL目录
 Common：实现了硬件初始化函数<span class="token function">Hal_Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>、硬件抽象层驱动初始化<span class="token function">HalDriverInit</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>函数和硬件抽象层事件处理函数<span class="token function">Hal_ProcessEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>；
 Include：中主要包含了硬件资源的定义与函数声明；
 Target：主要为LED等硬件资源进行配置、实现硬件资源的实现函数；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>Hal_Init()函数主要为硬件抽象层注册任务ID</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">Hal_Init</span><span class="token punctuation">(</span> uint8 task_id <span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
 	<span class="token comment">/* 注册任务 ID */</span>
 	Hal_TaskID <span class="token operator">=</span> task_id<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>HalDriverInit()函数主要实现硬件资源的初始化</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">HalDriverInit</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -313,7 +397,6 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token punctuation">(</span>defined HAL_AES<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>HAL_AES <span class="token operator">==</span> TRUE<span class="token punctuation">)</span></span></span>
 	<span class="token function">HalAesInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*LCD初始化*/</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token punctuation">(</span>defined HAL_LCD<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>HAL_LCD <span class="token operator">==</span> TRUE<span class="token punctuation">)</span></span></span>
 	<span class="token function">HalLcdInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -335,7 +418,6 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
 	<span class="token function">HalSpiInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>HHal_ProcessEvent()函数由APP层OSAL_SampleApp.c文件调用，主要实现硬件抽象层的各种事件处理，比如系统消息事件、LED闪烁事件、按键事件和睡眠模式事件。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">uint16 <span class="token function">Hal_ProcessEvent</span><span class="token punctuation">(</span> uint8 task_id<span class="token punctuation">,</span> uint16 events <span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -359,7 +441,6 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">/* BLINK_LEDS &amp;&amp; HAL_LED */</span></span>
 	<span class="token keyword">return</span> events <span class="token operator">^</span> HAL_LED_BLINK_EVENT<span class="token punctuation">;</span>
 	<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/*按键事件*/</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>events <span class="token operator">&amp;</span> HAL_KEY_EVENT<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -383,8 +464,8 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
 <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>​    HTarget hal_board_cfg.h文件中为硬件资源LED等进行配置，在官方的协议栈中定义了3个LED，分别接CC2530的P1_0、P1_1和P1_4引脚。</p>
+<p>​ HTarget
+hal_board_cfg.h文件中为硬件资源LED等进行配置，在官方的协议栈中定义了3个LED，分别接CC2530的P1_0、P1_1和P1_4引脚。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/* LED1配置 */</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED1_BV</span>           <span class="token expression"><span class="token function">BV</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED1_SBIT</span>         <span class="token expression">P1_0</span></span>
@@ -404,7 +485,6 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
   <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED3_DDR</span>          <span class="token expression">P1DIR</span></span>
   <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LED3_POLARITY</span>     <span class="token expression">ACTIVE_HIGH</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>控制LED开关状态。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">if</span> <span class="token expression"><span class="token function">defined</span> <span class="token punctuation">(</span>HAL_BOARD_CC2530EB_REV17<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">defined</span> <span class="token punctuation">(</span>HAL_PA_LNA<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token function">defined</span> <span class="token punctuation">(</span>HAL_PA_LNA_CC2590<span class="token punctuation">)</span></span></span>
 	<span class="token comment">/*打开LED*/</span>
@@ -428,8 +508,7 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
   <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">HAL_STATE_LED3</span><span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">)</span>          <span class="token punctuation">(</span><span class="token function">LED3_POLARITY</span> <span class="token punctuation">(</span>LED3_SBIT<span class="token punctuation">)</span><span class="token punctuation">)</span></span></span>
   <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">HAL_STATE_LED4</span><span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">)</span>          <span class="token function">HAL_STATE_LED1</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>​    在Drives文件中定义了硬件资源的驱动函数文件</p>
+<p>​ 在Drives文件中定义了硬件资源的驱动函数文件</p>
 <ul>
 <li><strong>LED</strong>：在hal_led.c文件中实现，为LED提供驱动函数；</li>
 <li><strong>ADC</strong>：在hal_adc.c文件中实现，为ADC提供驱动函数；</li>
@@ -443,10 +522,14 @@ Target：主要为LED等硬件资源进行配置、实现硬件资源的实现�
 <p>APP应用层调用LED设置函数</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token function">HalLedSet</span><span class="token punctuation">(</span>uint8 leds<span class="token punctuation">,</span>uint8 mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">HalLedBlink</span><span class="token punctuation">(</span>uint8 leds<span class="token punctuation">,</span>uint8 numBlink<span class="token punctuation">,</span>uint8 percend<span class="token punctuation">,</span>uint16 period<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20210527185047.png" alt="image-20210527185047722" loading="lazy"></p>
-<p>​    </p>
-</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay-qrcode.jpg"><img loading="lazy" src="/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/qqpay-qrcode.jpg"><img loading="lazy" src="/images/qqpay-qrcode.jpg" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/wechatpay-qrcode.jpg"><img loading="lazy" src="/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Explorer</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://ccsu.top/posts/3fbe36e5/" title="Zstack协议栈">http://ccsu.top/posts/3fbe36e5/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/121b6cd5/" rel="prev" title="Zigbee无线通信与网络组建"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">Zigbee无线通信与网络组建</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/d1180c9/" rel="next" title="zigbee串口通信"><span class="post-nav-text">zigbee串口通信</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><script src="/js/comments/waline.js" type="module" defer></script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002891号-2</a></div><div class="copyright"><span>&copy; 2016 – 2023 </span><span class="with-love" id="animate" title="赞助者们"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Explorer</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.0.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.8</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20210527185047.png"
+alt="image-20210527185047722" />
+<figcaption aria-hidden="true">image-20210527185047722</figcaption>
+</figure>
+<p>​</p>
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay-qrcode.jpg"><img loading="lazy" src="/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/qqpay-qrcode.jpg"><img loading="lazy" src="/images/qqpay-qrcode.jpg" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/wechatpay-qrcode.jpg"><img loading="lazy" src="/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Explorer</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://ccsu.top/posts/3fbe36e5/" title="Zstack协议栈">http://ccsu.top/posts/3fbe36e5/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/121b6cd5/" rel="prev" title="Zigbee无线通信与网络组建"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">Zigbee无线通信与网络组建</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/d1180c9/" rel="next" title="zigbee串口通信"><span class="post-nav-text">zigbee串口通信</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><script src="/js/comments/waline.js" type="module" defer></script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002891号-2</a></div><div class="copyright"><span>&copy; 2016 – 2024 </span><span class="with-love" id="animate" title="赞助者们"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Explorer</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.0.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.8</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
   setTimeout(blog_live_time, 1000);
   const start = new Date('2022-02-12T00:00:00');
   const now = new Date();

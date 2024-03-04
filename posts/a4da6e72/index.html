@@ -24,43 +24,40 @@ document.addEventListener("pjax:success", initScrollReveal);
   }
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(bp, s);
-})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="多任务介绍现实生活中有很多的场景中的事情是同时进行的，比如开车的时候 手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；  试想，如果把唱歌和跳舞这2件事情分开依次完成的话，估计就没有那么好的效果了（想一下场景：先唱歌，然后在跳舞，O(∩_∩)O哈哈~） 程序中如下程序，来模拟“唱歌跳舞”这件事情 #coding&#x3D;utf-8  from time import sleep  def sing()">
+})();</script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9KWR9L');</script><!-- End Google Tag Manager --><meta name="description" content="多任务介绍 现实生活中 有很多的场景中的事情是同时进行的，比如开车的时候 手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；   img  试想，如果把唱歌和跳舞这2件事情分开依次完成的话，估计就没有那么好的效果了（想一下场景：先唱歌，然后在跳舞，O(∩_∩)O哈哈~） 程序中 如下程序，来模拟“唱歌跳舞”这件事情 #coding&#x3D;utf-8  from time impo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python多任务-线程">
 <meta property="og:url" content="http://ccsu.top/posts/a4da6e72/index.html">
 <meta property="og:site_name" content="explorerの博客">
-<meta property="og:description" content="多任务介绍现实生活中有很多的场景中的事情是同时进行的，比如开车的时候 手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；  试想，如果把唱歌和跳舞这2件事情分开依次完成的话，估计就没有那么好的效果了（想一下场景：先唱歌，然后在跳舞，O(∩_∩)O哈哈~） 程序中如下程序，来模拟“唱歌跳舞”这件事情 #coding&#x3D;utf-8  from time import sleep  def sing()">
+<meta property="og:description" content="多任务介绍 现实生活中 有很多的场景中的事情是同时进行的，比如开车的时候 手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；   img  试想，如果把唱歌和跳舞这2件事情分开依次完成的话，估计就没有那么好的效果了（想一下场景：先唱歌，然后在跳舞，O(∩_∩)O哈哈~） 程序中 如下程序，来模拟“唱歌跳舞”这件事情 #coding&#x3D;utf-8  from time impo">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205200.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205249.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205356.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205411.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205417.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205426.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205623.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205706.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205759.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210210.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210233.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319213103.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215542.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215630.gif">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215638.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215802.png">
 <meta property="article:published_time" content="2022-03-19T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-03-19T16:53:47.620Z">
 <meta property="article:author" content="Explorer">
 <meta property="article:tag" content="线程">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205200.jpg"><script>(function() {
+<meta name="twitter:card" content="summary"><script>(function() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   const setting = localStorage.getItem('darken-mode') || 'auto'
   if (setting === 'dark' || (prefersDark && setting !== 'light'))
     document.documentElement.classList.toggle('dark', true)
-})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Explorer"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="Explorer"><span class="site-author-status" title="努力学习">😄</span></a><div class="site-author-name"><a href="/about/">Explorer</a></div><span class="site-name">explorerの博客</span><sub class="site-subtitle"></sub><div class="site-desciption">前路漫漫，当克己，当慎独!</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">74</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">18</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">64</span></a></div><a class="site-state-item hty-icon-button" href="/about/" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/wushuai2000" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=549838440" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/huan-ji-91-3/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/345844264" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:2506812280@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/albums/" title="相册" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">多任务介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E5%AE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD"><span class="toc-number">1.1.</span> <span class="toc-text">现实生活中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD"><span class="toc-number">1.2.</span> <span class="toc-text">程序中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">多任务的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">注意：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8threading%E6%A8%A1%E5%9D%97"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. 使用threading模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">3.0.1.1.</span> <span class="toc-text">单线程执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">3.0.1.2.</span> <span class="toc-text">多线程执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">3.0.1.3.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BB%E7%BA%BF%E7%A8%8B%E4%BC%9A%E7%AD%89%E5%BE%85%E6%89%80%E6%9C%89%E7%9A%84%E5%AD%90%E7%BA%BF%E7%A8%8B%E7%BB%93%E6%9D%9F%E5%90%8E%E6%89%8D%E7%BB%93%E6%9D%9F"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 主线程会等待所有的子线程结束后才结束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9F%A5%E7%9C%8B%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 查看线程数量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B-%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text">线程-注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">1. 线程执行代码的封装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.0.1.1.</span> <span class="toc-text">2. 线程的执行顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="toc-number">4.0.1.2.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%80%BB%E7%BB%93"><span class="toc-number">4.0.2.</span> <span class="toc-text">3. 总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%85%B1%E4%BA%AB%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">多线程-共享全局变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%BD%93%E5%81%9A%E5%AE%9E%E5%8F%82%E4%BC%A0%E9%80%92%E5%88%B0%E7%BA%BF%E7%A8%8B%E4%B8%AD"><span class="toc-number">5.1.</span> <span class="toc-text">列表当做实参传递到线程中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-number">5.2.</span> <span class="toc-text">总结：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%85%B1%E4%BA%AB%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">多线程-共享全局变量问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">6.0.1.</span> <span class="toc-text">多线程开发可能遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%951"><span class="toc-number">6.0.1.1.</span> <span class="toc-text">测试1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A"><span class="toc-number">6.0.1.2.</span> <span class="toc-text">运行结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%952"><span class="toc-number">6.0.1.3.</span> <span class="toc-text">测试2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%EF%BC%9A-1"><span class="toc-number">6.0.1.4.</span> <span class="toc-text">运行结果：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">6.0.2.</span> <span class="toc-text">结论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">同步的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%97%B6%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">7.0.0.1.</span> <span class="toc-text">解决线程同时修改全局变量的方式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E9%94%81"><span class="toc-number">8.</span> <span class="toc-text">互斥锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A-1"><span class="toc-number">8.0.0.1.</span> <span class="toc-text">注意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BA%92%E6%96%A5%E9%94%81%E5%AE%8C%E6%88%902%E4%B8%AA%E7%BA%BF%E7%A8%8B%E5%AF%B9%E5%90%8C%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%90%84%E5%8A%A0100%E4%B8%87%E6%AC%A1%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">8.0.0.2.</span> <span class="toc-text">使用互斥锁完成2个线程对同一个全局变量各加100万次的操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E9%94%81%E8%A7%A3%E9%94%81%E8%BF%87%E7%A8%8B"><span class="toc-number">8.1.</span> <span class="toc-text">上锁解锁过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.2.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-number">9.</span> <span class="toc-text">死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%AD%BB%E9%94%81"><span class="toc-number">9.0.1.</span> <span class="toc-text">1. 死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-number">9.0.2.</span> <span class="toc-text">2. 避免死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95"><span class="toc-number">9.0.3.</span> <span class="toc-text">附录-银行家算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%89%88udp%E8%81%8A%E5%A4%A9%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">案例：多任务版udp聊天器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="toc-number">10.0.0.1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82"><span class="toc-number">10.0.0.2.</span> <span class="toc-text">要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81"><span class="toc-number">10.0.0.3.</span> <span class="toc-text">参考代码:</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/57%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/" style="font-size: 12px; color: #999">57步进电机</a> <a href="/tags/AT9SPro/" style="font-size: 12px; color: #999">AT9SPro</a> <a href="/tags/Anaconda/" style="font-size: 12px; color: #999">Anaconda</a> <a href="/tags/Arduino/" style="font-size: 24px; color: #3383cd">Arduino</a> <a href="/tags/CUDA/" style="font-size: 18px; color: #668eb3">CUDA</a> <a href="/tags/CUDNN/" style="font-size: 12px; color: #999">CUDNN</a> <a href="/tags/Conda/" style="font-size: 12px; color: #999">Conda</a> <a href="/tags/DHT11/" style="font-size: 12px; color: #999">DHT11</a> <a href="/tags/Docker/" style="font-size: 18px; color: #668eb3">Docker</a> <a href="/tags/ESP8266/" style="font-size: 12px; color: #999">ESP8266</a> <a href="/tags/GPIO/" style="font-size: 30px; color: #0078e7">GPIO</a> <a href="/tags/GPS/" style="font-size: 12px; color: #999">GPS</a> <a href="/tags/GPU/" style="font-size: 24px; color: #3383cd">GPU</a> <a href="/tags/HC-05/" style="font-size: 12px; color: #999">HC-05</a> <a href="/tags/HTML/" style="font-size: 18px; color: #668eb3">HTML</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #668eb3">Hexo</a> <a href="/tags/Hexo%E5%AE%89%E8%A3%85/" style="font-size: 24px; color: #3383cd">Hexo安装</a> <a href="/tags/IAR%E8%BD%AF%E4%BB%B6/" style="font-size: 12px; color: #999">IAR软件</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #668eb3">JavaScript</a> <a href="/tags/Json/" style="font-size: 12px; color: #999">Json</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#6200ee;"><link itemprop="mainEntityOfPage" href="http://ccsu.top/posts/a4da6e72/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Explorer"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="explorerの博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Python多任务-线程</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">Posted on</span> <time title="Created: 2022-03-19 23:00:00" itemprop="dateCreated datePublished" datetime="2022-03-19T23:00:00+08:00">2022-03-19</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <span class="post-meta-icon-text">Edited on</span> <time title="Modified: 2022-03-20 00:53:47" itemprop="dateModified" datetime="2022-03-20T00:53:47+08:00">2022-03-20</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="Word count in article"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="Word count in article">5.1k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Reading time"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="Reading time">20m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Python/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Python</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E7%BA%BF%E7%A8%8B/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">线程</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="多任务介绍"><a href="#多任务介绍" class="headerlink" title="多任务介绍"></a>多任务介绍</h1><h2 id="现实生活中"><a href="#现实生活中" class="headerlink" title="现实生活中"></a>现实生活中</h2><p>有很多的场景中的事情是同时进行的，比如开车的时候 手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205200.jpg" alt="img" loading="lazy"></p>
+})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="Explorer"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="Explorer"><span class="site-author-status" title="努力学习">😄</span></a><div class="site-author-name"><a href="/about/">Explorer</a></div><span class="site-name">explorerの博客</span><sub class="site-subtitle"></sub><div class="site-desciption">前路漫漫，当克己，当慎独!</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">74</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">18</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">64</span></a></div><a class="site-state-item hty-icon-button" href="/about/" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/wushuai2000" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=549838440" title="网易云音乐" target="_blank" style="color:#C20C0C"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.zhihu.com/people/huan-ji-91-3/" title="知乎" target="_blank" style="color:#0084FF"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/345844264" title="哔哩哔哩" target="_blank" style="color:#FF8EB3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:2506812280@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a><a class="links-item hty-icon-button" href="/albums/" title="相册" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">多任务介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E5%AE%9E%E7%94%9F%E6%B4%BB%E4%B8%AD"><span class="toc-number">1.1.</span> <span class="toc-text">现实生活中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E4%B8%AD"><span class="toc-number">1.2.</span> <span class="toc-text">程序中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">多任务的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">注意：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8threading%E6%A8%A1%E5%9D%97"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. 使用threading模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">3.0.1.1.</span> <span class="toc-text">单线程执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="toc-number">3.0.1.2.</span> <span class="toc-text">多线程执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">3.0.1.3.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E7%BA%BF%E7%A8%8B%E4%BC%9A%E7%AD%89%E5%BE%85%E6%89%80%E6%9C%89%E7%9A%84%E5%AD%90%E7%BA%BF%E7%A8%8B%E7%BB%93%E6%9D%9F%E5%90%8E%E6%89%8D%E7%BB%93%E6%9D%9F"><span class="toc-number">3.0.2.</span> <span class="toc-text">2.
+主线程会等待所有的子线程结束后才结束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BA%BF%E7%A8%8B%E6%95%B0%E9%87%8F"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 查看线程数量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B-%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text">线程-注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">1. 线程执行代码的封装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="toc-number">4.0.1.</span> <span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.0.1.1.</span> <span class="toc-text">2. 线程的执行顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-2"><span class="toc-number">4.0.1.2.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.0.2.</span> <span class="toc-text">3. 总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%85%B1%E4%BA%AB%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">多线程-共享全局变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%BD%93%E5%81%9A%E5%AE%9E%E5%8F%82%E4%BC%A0%E9%80%92%E5%88%B0%E7%BA%BF%E7%A8%8B%E4%B8%AD"><span class="toc-number">5.1.</span> <span class="toc-text">列表当做实参传递到线程中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">5.2.</span> <span class="toc-text">总结：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E5%85%B1%E4%BA%AB%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">多线程-共享全局变量问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">6.0.1.</span> <span class="toc-text">多线程开发可能遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%951"><span class="toc-number">6.0.1.1.</span> <span class="toc-text">测试1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">6.0.1.2.</span> <span class="toc-text">运行结果：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%952"><span class="toc-number">6.0.1.3.</span> <span class="toc-text">测试2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-1"><span class="toc-number">6.0.1.4.</span> <span class="toc-text">运行结果：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">6.0.2.</span> <span class="toc-text">结论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">同步的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%97%B6%E4%BF%AE%E6%94%B9%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">7.0.0.1.</span> <span class="toc-text">解决线程同时修改全局变量的方式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E9%94%81"><span class="toc-number">8.</span> <span class="toc-text">互斥锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-2"><span class="toc-number">8.0.0.1.</span> <span class="toc-text">注意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BA%92%E6%96%A5%E9%94%81%E5%AE%8C%E6%88%902%E4%B8%AA%E7%BA%BF%E7%A8%8B%E5%AF%B9%E5%90%8C%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%90%84%E5%8A%A0100%E4%B8%87%E6%AC%A1%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">8.0.0.2.</span> <span class="toc-text">使用互斥锁完成2个线程对同一个全局变量各加100万次的操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E9%94%81%E8%A7%A3%E9%94%81%E8%BF%87%E7%A8%8B"><span class="toc-number">8.1.</span> <span class="toc-text">上锁解锁过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-number">8.2.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%BB%E9%94%81"><span class="toc-number">9.</span> <span class="toc-text">死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%BB%E9%94%81-1"><span class="toc-number">9.0.1.</span> <span class="toc-text">1. 死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-number">9.0.2.</span> <span class="toc-text">2. 避免死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95"><span class="toc-number">9.0.3.</span> <span class="toc-text">附录-银行家算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%89%88udp%E8%81%8A%E5%A4%A9%E5%99%A8"><span class="toc-number">10.</span> <span class="toc-text">案例：多任务版udp聊天器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E-3"><span class="toc-number">10.0.0.1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82"><span class="toc-number">10.0.0.2.</span> <span class="toc-text">要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81"><span class="toc-number">10.0.0.3.</span> <span class="toc-text">参考代码:</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="tag-cloud"><div class="tag-cloud-tags"><a href="/tags/57%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA/" style="font-size: 12px; color: #999">57步进电机</a> <a href="/tags/AT9SPro/" style="font-size: 12px; color: #999">AT9SPro</a> <a href="/tags/Anaconda/" style="font-size: 12px; color: #999">Anaconda</a> <a href="/tags/Arduino/" style="font-size: 24px; color: #3383cd">Arduino</a> <a href="/tags/CUDA/" style="font-size: 18px; color: #668eb3">CUDA</a> <a href="/tags/CUDNN/" style="font-size: 12px; color: #999">CUDNN</a> <a href="/tags/Conda/" style="font-size: 12px; color: #999">Conda</a> <a href="/tags/DHT11/" style="font-size: 12px; color: #999">DHT11</a> <a href="/tags/Docker/" style="font-size: 18px; color: #668eb3">Docker</a> <a href="/tags/ESP8266/" style="font-size: 12px; color: #999">ESP8266</a> <a href="/tags/GPIO/" style="font-size: 30px; color: #0078e7">GPIO</a> <a href="/tags/GPS/" style="font-size: 12px; color: #999">GPS</a> <a href="/tags/GPU/" style="font-size: 24px; color: #3383cd">GPU</a> <a href="/tags/HC-05/" style="font-size: 12px; color: #999">HC-05</a> <a href="/tags/HTML/" style="font-size: 18px; color: #668eb3">HTML</a> <a href="/tags/Hexo/" style="font-size: 18px; color: #668eb3">Hexo</a> <a href="/tags/Hexo%E5%AE%89%E8%A3%85/" style="font-size: 24px; color: #3383cd">Hexo安装</a> <a href="/tags/IAR%E8%BD%AF%E4%BB%B6/" style="font-size: 12px; color: #999">IAR软件</a> <a href="/tags/JavaScript/" style="font-size: 18px; color: #668eb3">JavaScript</a> <a href="/tags/Json/" style="font-size: 12px; color: #999">Json</a></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#6200ee;"><link itemprop="mainEntityOfPage" href="http://ccsu.top/posts/a4da6e72/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Explorer"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="explorerの博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Python多任务-线程</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <span class="post-meta-icon-text">Posted on</span> <time title="Created: 2022-03-19 23:00:00" itemprop="dateCreated datePublished" datetime="2022-03-19T23:00:00+08:00">2022-03-19</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <span class="post-meta-icon-text">Edited on</span> <time title="Modified: 2022-03-20 00:53:47" itemprop="dateModified" datetime="2022-03-20T00:53:47+08:00">2022-03-20</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="Word count in article"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="Word count in article">5.1k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Reading time"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="Reading time">20m</span></span></span><span class="post-busuanzi"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span id="busuanzi_value_page_pv"></span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Python/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Python</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E7%BA%BF%E7%A8%8B/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">线程</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><h1 id="多任务介绍">多任务介绍</h1>
+<h2 id="现实生活中">现实生活中</h2>
+<p>有很多的场景中的事情是同时进行的，比如开车的时候
+手和脚共同来驾驶汽车，再比如唱歌跳舞也是同时进行的；</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205200.jpg"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>试想，如果把唱歌和跳舞这2件事情分开依次完成的话，估计就没有那么好的效果了（想一下场景：先唱歌，然后在跳舞，O(∩_∩)O哈哈~）</p>
-<h2 id="程序中"><a href="#程序中" class="headerlink" title="程序中"></a>程序中</h2><p>如下程序，来模拟“唱歌跳舞”这件事情</p>
+<h2 id="程序中">程序中</h2>
+<p>如下程序，来模拟“唱歌跳舞”这件事情</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 
 <span class="token keyword">from</span> time <span class="token keyword">import</span> sleep
@@ -78,27 +75,57 @@ document.addEventListener("pjax:success", initScrollReveal);
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     sing<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#唱歌</span>
     dance<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#跳舞</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果如下：</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205249.png" alt="image-20220319205249393" loading="lazy"></p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205249.png"
+alt="image-20220319205249393" />
+<figcaption aria-hidden="true">image-20220319205249393</figcaption>
+</figure>
+<h2 id="注意">注意</h2>
+<ul>
 <li>很显然刚刚的程序并没有完成唱歌和跳舞同时进行的要求</li>
 <li>如果想要实现“唱歌跳舞”同时进行，那么就需要一个新的方法，叫做：<strong>多任务</strong></li>
 </ul>
-<h1 id="多任务的概念"><a href="#多任务的概念" class="headerlink" title="多任务的概念"></a>多任务的概念</h1><p>什么叫“多任务”呢？简单地说，就是操作系统可以同时运行多个任务。打个比方，你一边在用浏览器上网，一边在听MP3，一边在用Word赶作业，这就是多任务，至少同时有3个任务正在运行。还有很多任务悄悄地在后台同时运行着，只是桌面上没有显示而已。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205356.png" alt="img" loading="lazy"></p>
+<h1 id="多任务的概念">多任务的概念</h1>
+<p>什么叫“多任务”呢？简单地说，就是操作系统可以同时运行多个任务。打个比方，你一边在用浏览器上网，一边在听MP3，一边在用Word赶作业，这就是多任务，至少同时有3个任务正在运行。还有很多任务悄悄地在后台同时运行着，只是桌面上没有显示而已。</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205356.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>现在，多核CPU已经非常普及了，但是，即使过去的单核CPU，也可以执行多任务。由于CPU执行代码都是顺序执行的，那么，单核CPU是怎么执行多任务的呢？</p>
 <p>答案就是操作系统轮流让各个任务交替执行，任务1执行0.01秒，切换到任务2，任务2执行0.01秒，再切换到任务3，执行0.01秒……这样反复执行下去。表面上看，每个任务都是交替执行的，但是，由于CPU的执行速度实在是太快了，我们感觉就像所有任务都在同时执行一样。</p>
 <p>真正的并行执行多任务只能在多核CPU上实现，但是，由于任务数量远远多于CPU的核心数量，所以，操作系统也会自动把很多任务轮流调度到每个核心上执行。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205411.jpg" alt="img" loading="lazy"></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205417.gif" alt="img" loading="lazy"></p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205426.gif" alt="img" loading="lazy"></p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ul>
-<li>**&#x3D;&#x3D;并发&#x3D;&#x3D;**：指的是任务数多余cpu核数，通过操作系统的各种任务调度算法，实现用多个任务“一起”执行（实际上总有一些任务不在执行，因为切换任务的速度相当快，看上去一起执行而已）</li>
-<li>**&#x3D;&#x3D;并行&#x3D;&#x3D;**：指的是任务数小于等于cpu核数，即任务真的是一起执行的</li>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205411.jpg"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205417.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205426.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h4 id="注意-1">注意：</h4>
+<ul>
+<li><strong>==并发==</strong>：指的是任务数多余cpu核数，通过操作系统的各种任务调度算法，实现用多个任务“一起”执行（实际上总有一些任务不在执行，因为切换任务的速度相当快，看上去一起执行而已）</li>
+<li><strong>==并行==</strong>：指的是任务数小于等于cpu核数，即任务真的是一起执行的</li>
 </ul>
-<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p>python的thread模块是比较底层的模块，python的threading模块是对thread做了一些包装的，可以更加方便的被使用</p>
-<h3 id="1-使用threading模块"><a href="#1-使用threading模块" class="headerlink" title="1. 使用threading模块"></a>1. 使用threading模块</h3><h4 id="单线程执行"><a href="#单线程执行" class="headerlink" title="单线程执行"></a>单线程执行</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
+<h1 id="线程">线程</h1>
+<p>python的thread模块是比较底层的模块，python的threading模块是对thread做了一些包装的，可以更加方便的被使用</p>
+<h3 id="使用threading模块">1. 使用threading模块</h3>
+<h4 id="单线程执行">单线程执行</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> time
 
 <span class="token keyword">def</span> <span class="token function">saySorry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -108,10 +135,15 @@ document.addEventListener("pjax:success", initScrollReveal);
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         saySorry<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果：</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205623.gif" alt="img" loading="lazy"></p>
-<h4 id="多线程执行"><a href="#多线程执行" class="headerlink" title="多线程执行"></a>多线程执行</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205623.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h4 id="多线程执行">多线程执行</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
 <span class="token keyword">import</span> time
 
@@ -123,14 +155,21 @@ document.addEventListener("pjax:success", initScrollReveal);
     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         t <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>saySorry<span class="token punctuation">)</span>
         t<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#启动线程，即让线程开始执行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果：</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205706.gif" alt="img" loading="lazy"></p>
-<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><ol>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205706.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h4 id="说明">说明</h4>
+<ol type="1">
 <li>可以明显看出使用了多线程并发的操作，花费时间要短很多</li>
 <li>当调用<code>start()</code>时，才会真正的创建线程，并且开始执行</li>
 </ol>
-<h3 id="2-主线程会等待所有的子线程结束后才结束"><a href="#2-主线程会等待所有的子线程结束后才结束" class="headerlink" title="2. 主线程会等待所有的子线程结束后才结束"></a>2. 主线程会等待所有的子线程结束后才结束</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
+<h3 id="主线程会等待所有的子线程结束后才结束">2.
+主线程会等待所有的子线程结束后才结束</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
 <span class="token keyword">from</span> time <span class="token keyword">import</span> sleep<span class="token punctuation">,</span>ctime
 
@@ -155,9 +194,14 @@ document.addEventListener("pjax:success", initScrollReveal);
 
     <span class="token comment">#sleep(5) # 屏蔽此行代码，试试看，程序是否会立马结束？</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---结束---:%s'</span><span class="token operator">%</span>ctime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205759.gif" alt="img" loading="lazy"></p>
-<h3 id="3-查看线程数量"><a href="#3-查看线程数量" class="headerlink" title="3. 查看线程数量"></a>3. 查看线程数量</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319205759.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h3 id="查看线程数量">3. 查看线程数量</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
 <span class="token keyword">from</span> time <span class="token keyword">import</span> sleep<span class="token punctuation">,</span>ctime
 
@@ -187,9 +231,15 @@ document.addEventListener("pjax:success", initScrollReveal);
             <span class="token keyword">break</span>
 
         sleep<span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210210.gif" alt="img" loading="lazy"></p>
-<h1 id="线程-注意点"><a href="#线程-注意点" class="headerlink" title="线程-注意点"></a>线程-注意点</h1><h4 id="1-线程执行代码的封装"><a href="#1-线程执行代码的封装" class="headerlink" title="1. 线程执行代码的封装"></a>1. 线程执行代码的封装</h4><p>通过上一小节，能够看出，通过使用threading模块能完成多任务的程序开发，为了让每个线程的封装性更完美，所以使用threading模块时，往往会定义一个新的子类class，只要继承<code>threading.Thread</code>就可以了，然后重写<code>run</code>方法</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210210.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h1 id="线程-注意点">线程-注意点</h1>
+<h4 id="线程执行代码的封装">1. 线程执行代码的封装</h4>
+<p>通过上一小节，能够看出，通过使用threading模块能完成多任务的程序开发，为了让每个线程的封装性更完美，所以使用threading模块时，往往会定义一个新的子类class，只要继承<code>threading.Thread</code>就可以了，然后重写<code>run</code>方法</p>
 <p>示例如下：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
@@ -206,12 +256,18 @@ document.addEventListener("pjax:success", initScrollReveal);
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     t <span class="token operator">=</span> MyThread<span class="token punctuation">(</span><span class="token punctuation">)</span>
     t<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210233.gif" alt="img" loading="lazy"></p>
-<h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><ul>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319210233.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h3 id="说明-1">说明</h3>
+<ul>
 <li>python的threading.Thread类有一个run方法，用于定义线程的功能函数，可以在自己的线程类中覆盖该方法。而创建自己的线程实例后，通过Thread类的start方法，可以启动该线程，交给python虚拟机进行调度，当该线程获得执行的机会时，就会调用run方法执行线程。</li>
 </ul>
-<h4 id="2-线程的执行顺序"><a href="#2-线程的执行顺序" class="headerlink" title="2. 线程的执行顺序"></a>2. 线程的执行顺序</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
+<h4 id="线程的执行顺序">2. 线程的执行顺序</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
 <span class="token keyword">import</span> time
 
@@ -227,7 +283,6 @@ document.addEventListener("pjax:success", initScrollReveal);
         t<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     test<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>执行结果：(运行的结果可能不一样，但是大体是一致的)</p>
 <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">I&#39;m Thread-1 @ 0
 I&#39;m Thread-2 @ 0
@@ -244,14 +299,16 @@ I&#39;m Thread-5 @ 2
 I&#39;m Thread-2 @ 2
 I&#39;m Thread-1 @ 2
 I&#39;m Thread-3 @ 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>从代码和执行结果我们可以看出，多线程程序的执行顺序是不确定的。当执行到sleep语句时，线程将被阻塞（Blocked），到sleep结束后，线程进入就绪（Runnable）状态，等待调度。而线程调度将自行选择一个线程执行。上面的代码中只能保证每个线程都运行完整个run函数，但是线程的启动顺序、run函数中每次循环的执行顺序都不能确定。</p>
-<h3 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h3><ol>
+<h4 id="说明-2">说明</h4>
+<p>从代码和执行结果我们可以看出，多线程程序的执行顺序是不确定的。当执行到sleep语句时，线程将被阻塞（Blocked），到sleep结束后，线程进入就绪（Runnable）状态，等待调度。而线程调度将自行选择一个线程执行。上面的代码中只能保证每个线程都运行完整个run函数，但是线程的启动顺序、run函数中每次循环的执行顺序都不能确定。</p>
+<h3 id="总结">3. 总结</h3>
+<ol type="1">
 <li>每个线程默认有一个名字，尽管上面的例子中没有指定线程对象的name，但是python会自动为线程指定一个名字。</li>
 <li>当线程的run()方法结束时该线程完成。</li>
 <li>无法控制线程调度程序，但可以通过别的方式来影响线程调度的方式。</li>
 </ol>
-<h1 id="多线程-共享全局变量"><a href="#多线程-共享全局变量" class="headerlink" title="多线程-共享全局变量"></a>多线程-共享全局变量</h1><p>在一个函数中对全局变屋进行修改的时候，到底是香需要使用<code>global</code>进行说明要看是否对全局变量的执行指向进行了修改如果修改了执行，即上全局变量指向了一个新的地方，那么必须使用<code>global</code>如果，仅仅是修改了指向的空间中的数据，此时不用必须使用<code>global</code></p>
+<h1 id="多线程-共享全局变量">多线程-共享全局变量</h1>
+<p>在一个函数中对全局变屋进行修改的时候，到底是香需要使用<code>global</code>进行说明要看是否对全局变量的执行指向进行了修改如果修改了执行，即上全局变量指向了一个新的地方，那么必须使用<code>global</code>如果，仅仅是修改了指向的空间中的数据，此时不用必须使用<code>global</code></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> threading <span class="token keyword">import</span> Thread
 <span class="token keyword">import</span> time
 
@@ -280,13 +337,12 @@ time<span class="token punctuation">.</span>sleep<span class="token punctuation"
 
 t2 <span class="token operator">=</span> Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>work2<span class="token punctuation">)</span>
 t2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>线程创建之前g_num <span class="token keyword">is</span> <span class="token number">100</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work1<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">103</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work2<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">103</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="列表当做实参传递到线程中"><a href="#列表当做实参传递到线程中" class="headerlink" title="列表当做实参传递到线程中"></a>列表当做实参传递到线程中</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> threading <span class="token keyword">import</span> Thread
+<h2 id="列表当做实参传递到线程中">列表当做实参传递到线程中</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> threading <span class="token keyword">import</span> Thread
 <span class="token keyword">import</span> time
 
 <span class="token keyword">def</span> <span class="token function">work1</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -306,24 +362,26 @@ t1<span class="token punctuation">.</span>start<span class="token punctuation">(
 
 t2 <span class="token operator">=</span> Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>work2<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>g_nums<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 t2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果:</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work1<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work2<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ul>
+<h2 id="总结-1">总结：</h2>
+<ul>
 <li>在一个进程内的所有线程共享全局变量，很方便在多个线程间共享数据</li>
 <li>缺点就是，线程是对全局变量随意遂改可能造成多线程之间对全局变量的混乱（即线程非安全）</li>
 </ul>
-<h1 id="多线程-共享全局变量问题"><a href="#多线程-共享全局变量问题" class="headerlink" title="多线程-共享全局变量问题"></a>多线程-共享全局变量问题</h1><h3 id="多线程开发可能遇到的问题"><a href="#多线程开发可能遇到的问题" class="headerlink" title="多线程开发可能遇到的问题"></a>多线程开发可能遇到的问题</h3><p>假设两个线程t1和t2都要对全局变量g_num(默认是0)进行加1运算，t1和t2都各对g_num加10次，g_num的最终的结果应该为20。</p>
+<h1 id="多线程-共享全局变量问题">多线程-共享全局变量问题</h1>
+<h3 id="多线程开发可能遇到的问题">多线程开发可能遇到的问题</h3>
+<p>假设两个线程t1和t2都要对全局变量g_num(默认是0)进行加1运算，t1和t2都各对g_num加10次，g_num的最终的结果应该为20。</p>
 <p>但是由于是多线程同时操作，有可能出现下面情况：</p>
-<ol>
-<li>在g_num&#x3D;0时，t1取得g_num&#x3D;0。此时系统把t1调度为”sleeping”状态，把t2转换为”running”状态，t2也获得g_num&#x3D;0</li>
-<li>然后t2对得到的值进行加1并赋给g_num，使得g_num&#x3D;1</li>
+<ol type="1">
+<li>在g_num=0时，t1取得g_num=0。此时系统把t1调度为”sleeping”状态，把t2转换为”running”状态，t2也获得g_num=0</li>
+<li>然后t2对得到的值进行加1并赋给g_num，使得g_num=1</li>
 <li>然后系统又把t2调度为”sleeping”，把t1转为”running”。线程t1又把它之前得到的0加1后赋值给g_num。</li>
-<li>这样导致虽然t1和t2都对g_num加1，但结果仍然是g_num&#x3D;1</li>
+<li>这样导致虽然t1和t2都对g_num加1，但结果仍然是g_num=1</li>
 </ol>
-<h4 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
+<h4 id="测试1">测试1</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
 <span class="token keyword">import</span> time
 
 g_num <span class="token operator">=</span> <span class="token number">0</span>
@@ -354,13 +412,13 @@ t2<span class="token punctuation">.</span>start<span class="token punctuation">(
     time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"2个线程对同一个全局变量操作之后的最终结果是:%s"</span> <span class="token operator">%</span> g_num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>线程创建之前g_num <span class="token keyword">is</span> <span class="token number">0</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<h4 id="运行结果">运行结果：</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>线程创建之前g_num <span class="token keyword">is</span> <span class="token number">0</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work1<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">100</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work2<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">200</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token number">2</span>个线程对同一个全局变量操作之后的最终结果是<span class="token punctuation">:</span><span class="token number">200</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="测试2"><a href="#测试2" class="headerlink" title="测试2"></a>测试2</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
+<h4 id="测试2">测试2</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
 <span class="token keyword">import</span> time
 
 g_num <span class="token operator">=</span> <span class="token number">0</span>
@@ -391,32 +449,41 @@ t2<span class="token punctuation">.</span>start<span class="token punctuation">(
     time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"2个线程对同一个全局变量操作之后的最终结果是:%s"</span> <span class="token operator">%</span> g_num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="运行结果：-1"><a href="#运行结果：-1" class="headerlink" title="运行结果："></a>运行结果：</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>线程创建之前g_num <span class="token keyword">is</span> <span class="token number">0</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<h4 id="运行结果-1">运行结果：</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>线程创建之前g_num <span class="token keyword">is</span> <span class="token number">0</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work1<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">1088005</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token keyword">in</span> work2<span class="token punctuation">,</span> g_num <span class="token keyword">is</span> <span class="token number">1286202</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
 <span class="token number">2</span>个线程对同一个全局变量操作之后的最终结果是<span class="token punctuation">:</span><span class="token number">1286202</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><ul>
-<li>&#x3D;&#x3D;如果多个线程同时对同一个全局变量操作，会出现资源竞争问题，从而数据结果会不正确&#x3D;&#x3D;</li>
+<h3 id="结论">结论</h3>
+<ul>
+<li>==如果多个线程同时对同一个全局变量操作，会出现资源竞争问题，从而数据结果会不正确==</li>
 </ul>
-<h1 id="同步的概念"><a href="#同步的概念" class="headerlink" title="同步的概念"></a>同步的概念</h1><p>同步就是协同步调，按预定的先后次序进行运行。如:你说完，我再说。</p>
-<p>“同”字从字面上容易理解为一起动作</p>
-<p>其实不是，”同”字应是指协同、协助、互相配合。</p>
+<h1 id="同步的概念">同步的概念</h1>
+<p>同步就是协同步调，按预定的先后次序进行运行。如:你说完，我再说。</p>
+<p>"同"字从字面上容易理解为一起动作</p>
+<p>其实不是，"同"字应是指协同、协助、互相配合。</p>
 <p>如进程、线程同步，可理解为进程或线程A和B一块配合，A执行到一定程度时要依靠B的某个结果，于是停下来，示意B运行;B执行，再将结果给A;A再继续操作。</p>
-<h4 id="解决线程同时修改全局变量的方式"><a href="#解决线程同时修改全局变量的方式" class="headerlink" title="解决线程同时修改全局变量的方式"></a>解决线程同时修改全局变量的方式</h4><p>对于上一小节提出的那个计算错误的问题，可以通过线程同步来进行解决</p>
+<h4
+id="解决线程同时修改全局变量的方式">解决线程同时修改全局变量的方式</h4>
+<p>对于上一小节提出的那个计算错误的问题，可以通过线程同步来进行解决</p>
 <p>思路，如下:</p>
-<ol>
+<ol type="1">
 <li>系统调用t1，然后获取到g_num的值为0，此时上一把锁，即不允许其他线程操作g_num</li>
 <li>t1对g_num的值进行+1</li>
 <li>t1解锁，此时g_num的值为1，其他的线程就可以使用g_num了，而且是g_num的值不是0而是1</li>
 <li>同理其他线程在对g_num进行修改时，都要先上锁，处理完后再解锁，在上锁的整个过程中不允许其他线程访问，就保证了数据的正确性</li>
 </ol>
-<h1 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h1><p>当多个线程几乎同时修改某一个共享数据的时候，需要进行同步控制</p>
+<h1 id="互斥锁">互斥锁</h1>
+<p>当多个线程几乎同时修改某一个共享数据的时候，需要进行同步控制</p>
 <p>线程同步能够保证多个线程安全访问竞争资源，最简单的同步机制是引入互斥锁。</p>
-<p>互斥锁为资源引入一个状态：锁定&#x2F;非锁定</p>
+<p>互斥锁为资源引入一个状态：锁定/非锁定</p>
 <p>某个线程要更改共享数据时，先将其锁定，此时资源的状态为“锁定”，其他线程不能更改；直到该线程释放资源，将资源的状态变成“非锁定”，其他的线程才能再次锁定该资源。互斥锁保证了每次只有一个线程进行写入操作，从而保证了多线程情况下数据的正确性。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319213103.png" alt="img" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319213103.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>threading模块中定义了Lock类，可以方便的处理锁定：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 创建锁</span>
 mutex <span class="token operator">=</span> threading<span class="token punctuation">.</span>Lock<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -426,12 +493,15 @@ mutex<span class="token punctuation">.</span>acquire<span class="token punctuati
 
 <span class="token comment"># 释放</span>
 mutex<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h4><ul>
+<h4 id="注意-2">注意：</h4>
+<ul>
 <li>如果这个锁之前是没有上锁的，那么acquire不会堵塞</li>
-<li>如果在调用acquire对这个锁上锁之前 它已经被 其他线程上了锁，那么此时acquire会堵塞，直到这个锁被解锁为止</li>
+<li>如果在调用acquire对这个锁上锁之前 它已经被
+其他线程上了锁，那么此时acquire会堵塞，直到这个锁被解锁为止</li>
 </ul>
-<h4 id="使用互斥锁完成2个线程对同一个全局变量各加100万次的操作"><a href="#使用互斥锁完成2个线程对同一个全局变量各加100万次的操作" class="headerlink" title="使用互斥锁完成2个线程对同一个全局变量各加100万次的操作"></a>使用互斥锁完成2个线程对同一个全局变量各加100万次的操作</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
+<h4
+id="使用互斥锁完成2个线程对同一个全局变量各加100万次的操作">使用互斥锁完成2个线程对同一个全局变量各加100万次的操作</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> threading
 <span class="token keyword">import</span> time
 
 g_num <span class="token operator">=</span> <span class="token number">0</span>
@@ -470,17 +540,17 @@ p2<span class="token punctuation">.</span>start<span class="token punctuation">(
     time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"2个线程对同一个全局变量操作之后的最终结果是:%s"</span> <span class="token operator">%</span> g_num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>运行结果：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>test1<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>g_num<span class="token operator">=</span><span class="token number">1909909</span>
 <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>test2<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>g_num<span class="token operator">=</span><span class="token number">2000000</span>
 <span class="token number">2</span>个线程对同一个全局变量操作之后的最终结果是<span class="token punctuation">:</span><span class="token number">2000000</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>可以看到最后的结果，加入互斥锁后，其结果与预期相符。</p>
-<h2 id="上锁解锁过程"><a href="#上锁解锁过程" class="headerlink" title="上锁解锁过程"></a>上锁解锁过程</h2><p>当一个线程调用锁的acquire()方法获得锁时，锁就进入“locked”状态。</p>
+<h2 id="上锁解锁过程">上锁解锁过程</h2>
+<p>当一个线程调用锁的acquire()方法获得锁时，锁就进入“locked”状态。</p>
 <p>每次只有一个线程可以获得锁。如果此时另一个线程试图获得这个锁，该线程就会变为“blocked”状态，称为“阻塞”，直到拥有锁的线程调用锁的release()方法释放锁之后，锁进入“unlocked”状态。</p>
 <p>线程调度程序从处于同步阻塞状态的线程中选择一个来获得锁，并使得该线程进入运行（running）状态。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>锁的好处：</p>
+<h2 id="总结-2">总结</h2>
+<p>锁的好处：</p>
 <ul>
 <li>确保了某段关键代码只能由一个线程从头到尾完整地执行</li>
 </ul>
@@ -489,10 +559,17 @@ p2<span class="token punctuation">.</span>start<span class="token punctuation">(
 <li>阻止了多线程并发执行，包含锁的某段代码实际上只能以单线程模式执行，效率就大大地下降了</li>
 <li>由于可以存在多个锁，不同的线程持有不同的锁，并试图获取对方持有的锁时，可能会造成死锁</li>
 </ul>
-<h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1><p>现实社会中，男女双方都在等待对方先道歉</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215542.png" alt="img" loading="lazy"></p>
+<h1 id="死锁">死锁</h1>
+<p>现实社会中，男女双方都在等待对方先道歉</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215542.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>如果双方都这样固执的等待对方先开口，弄不好，就分搜了</p>
-<h3 id="1-死锁"><a href="#1-死锁" class="headerlink" title="1. 死锁"></a>1. 死锁</h3><p>在线程间共享多个资源的时候，如果两个线程分别占有一部分资源并且同时等待对方的资源，就会造成死锁。</p>
+<h3 id="死锁-1">1. 死锁</h3>
+<p>在线程间共享多个资源的时候，如果两个线程分别占有一部分资源并且同时等待对方的资源，就会造成死锁。</p>
 <p>尽管死锁很少发生，但一旦发生就会造成应用的停止响应。下面看一个死锁的例子</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#coding=utf-8</span>
 <span class="token keyword">import</span> threading
@@ -540,37 +617,57 @@ mutexB <span class="token operator">=</span> threading<span class="token punctua
     t2 <span class="token operator">=</span> MyThread2<span class="token punctuation">(</span><span class="token punctuation">)</span>
     t1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
     t2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>运行结果： </p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215630.gif" alt="img" loading="lazy"></p>
+<p>运行结果：</p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215630.gif"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>此时已经进入到了死锁状态，可以使用ctrl-c退出</p>
-<h3 id="2-避免死锁"><a href="#2-避免死锁" class="headerlink" title="2. 避免死锁"></a>2. 避免死锁</h3><ul>
+<h3 id="避免死锁">2. 避免死锁</h3>
+<ul>
 <li>程序设计时要尽量避免（银行家算法）</li>
 <li>添加超时时间等</li>
 </ul>
-<h3 id="附录-银行家算法"><a href="#附录-银行家算法" class="headerlink" title="附录-银行家算法"></a>附录-银行家算法</h3><p>[背景知识]</p>
+<h3 id="附录-银行家算法">附录-银行家算法</h3>
+<p>[背景知识]</p>
 <p>一个银行家如何将一定数目的资金安全地借给若干个客户，使这些客户既能借到钱完成要干的事，同时银行家又能收回全部资金而不至于破产，这就是银行家问题。这个问题同操作系统中资源分配问题十分相似：银行家就像一个操作系统，客户就像运行的进程，银行家的资金就是系统的资源。</p>
 <p>[问题的描述]</p>
 <p>一个银行家拥有一定数量的资金，有若干个客户要贷款。每个客户须在一开始就声明他所需贷款的总额。若该客户贷款总额不超过银行家的资金总数，银行家可以接收客户的要求。客户贷款是以每次一个资金单位（如1万RMB等）的方式进行的，客户在借满所需的全部单位款额之前可能会等待，但银行家须保证这种等待是有限的，可完成的。</p>
 <p>例如：有三个客户C1，C2，C3，向银行家借款，该银行家的资金总额为10个资金单位，其中C1客户要借9各资金单位，C2客户要借3个资金单位，C3客户要借8个资金单位，总计20个资金单位。某一时刻的状态如图所示。</p>
-<p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215638.png" alt="img" loading="lazy"></p>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215638.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
 <p>对于a图的状态，按照安全序列的要求，我们选的第一个客户应满足该客户所需的贷款小于等于银行家当前所剩余的钱款，可以看出只有C2客户能被满足：C2客户需1个资金单位，小银行家手中的2个资金单位，于是银行家把1个资金单位借给C2客户，使之完成工作并归还所借的3个资金单位的钱，进入b图。同理，银行家把4个资金单位借给C3客户，使其完成工作，在c图中，只剩一个客户C1，它需7个资金单位，这时银行家有8个资金单位，所以C1也能顺利借到钱并完成工作。最后（见图d）银行家收回全部10个资金单位，保证不赔本。那麽客户序列{C1，C2，C3}就是个安全序列，按照这个序列贷款，银行家才是安全的。否则的话，若在图b状态时，银行家把手中的4个资金单位借给了C1，则出现不安全状态：这时C1，C3均不能完成工作，而银行家手中又没有钱了，系统陷入僵持局面，银行家也不能收回投资。</p>
-<p>综上所述，银行家算法是从当前状态出发，逐个按安全序列检查各客户谁能完成其工作，然后假定其完成工作且归还全部贷款，再进而检查下一个能完成工作的客户，……。如果所有客户都能完成工作，则找到一个安全序列，银行家才是安全的。</p>
-<h1 id="案例：多任务版udp聊天器"><a href="#案例：多任务版udp聊天器" class="headerlink" title="案例：多任务版udp聊天器"></a>案例：多任务版udp聊天器</h1><p><img src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215802.png" alt="img" loading="lazy"></p>
-<h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><blockquote>
+<p>综上所述，银行家算法是从当前状态出发，逐个按安全序列检查各客户谁能完成其工作，然后假定其完成工作且归还全部贷款，再进而检查下一个能完成工作的客户，......。如果所有客户都能完成工作，则找到一个安全序列，银行家才是安全的。</p>
+<h1 id="案例多任务版udp聊天器">案例：多任务版udp聊天器</h1>
+<figure>
+<img
+src="https://raw.githubusercontent.com/wushuai2000/PicGo/main/img/20220319215802.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h4 id="说明-3">说明</h4>
+<blockquote>
 <ul>
 <li>编写一个有2个线程的程序</li>
 <li>线程1用来接收数据然后显示</li>
 <li>线程2用来检测键盘数据然后通过udp发送数据</li>
 </ul>
 </blockquote>
-<h4 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h4><blockquote>
-<ol>
+<h4 id="要求">要求</h4>
+<blockquote>
+<ol type="1">
 <li>实现上述要求</li>
 <li>总结多任务程序的特点</li>
 </ol>
 </blockquote>
-<h4 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码:"></a>参考代码:</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> socket
+<h4 id="参考代码">参考代码:</h4>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> socket
 <span class="token keyword">import</span> threading
 
 
@@ -613,12 +710,7 @@ mutexB <span class="token operator">=</span> threading<span class="token punctua
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay-qrcode.jpg"><img loading="lazy" src="/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/qqpay-qrcode.jpg"><img loading="lazy" src="/images/qqpay-qrcode.jpg" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/wechatpay-qrcode.jpg"><img loading="lazy" src="/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Explorer</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://ccsu.top/posts/a4da6e72/" title="Python多任务-线程">http://ccsu.top/posts/a4da6e72/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/b23c6bbe/" rel="prev" title="Python多任务-进程"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">Python多任务-进程</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/65cd929b/" rel="next" title="Python基础"><span class="post-nav-text">Python基础</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><script src="/js/comments/waline.js" type="module" defer></script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002891号-2</a></div><div class="copyright"><span>&copy; 2016 – 2023 </span><span class="with-love" id="animate" title="赞助者们"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Explorer</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.0.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.8</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+</div></section><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay-qrcode.jpg"><img loading="lazy" src="/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/qqpay-qrcode.jpg"><img loading="lazy" src="/images/qqpay-qrcode.jpg" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/wechatpay-qrcode.jpg"><img loading="lazy" src="/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>Explorer</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://ccsu.top/posts/a4da6e72/" title="Python多任务-线程">http://ccsu.top/posts/a4da6e72/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/b23c6bbe/" rel="prev" title="Python多任务-进程"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">Python多任务-进程</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/65cd929b/" rel="next" title="Python基础"><span class="post-nav-text">Python基础</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div id="waline"></div><script src="/js/comments/waline.js" type="module" defer></script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备20002891号-2</a></div><div class="copyright"><span>&copy; 2016 – 2024 </span><span class="with-love" id="animate" title="赞助者们"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> Explorer</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.0.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.8</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
   setTimeout(blog_live_time, 1000);
   const start = new Date('2022-02-12T00:00:00');
   const now = new Date();
